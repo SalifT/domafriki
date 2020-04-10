@@ -266,7 +266,7 @@ $databases = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = 'P8QzLtqYhB0u7YYUoPIdFv1naenpjk3SCdeA_NQb0MvrLF9mJfy5bylKy-WfVOseX0esTKANJQ';
+$settings['hash_salt'] = 'eBn2z0k1JCKnDO7jI57GmPSG8kQvpy1HtMNK6pnQZRJjpMsTdiJnu8qwMrhrKW-2ViMqiOp-ag';
 
 /**
  * Deployment identifier.
@@ -741,60 +741,6 @@ $settings['entity_update_batch_size'] = 50;
  */
 $settings['entity_update_backup'] = TRUE;
 
-$config_directories['sync'] = '../config/sync';
-
-// Load .env file if exists
-if (file_exists(dirname(DRUPAL_ROOT) . '/.env')) {
-  // Load environment
-  $dotenv = new \Dotenv\Dotenv(dirname(DRUPAL_ROOT));
-  $dotenv->load();
-}
-
-# Load environment
-$env = getenv('ENVIRONMENT');
-
-# Load key/value settings
-$settings_drupal = array_filter(
-  $_SERVER,
-  function($key) {
-      return  strpos($key, 'SETTINGS_') === 0;
-  },
-  ARRAY_FILTER_USE_KEY
-);
-
-# Set key/value settings
-foreach ($settings_drupal as $name => $value) {
-  if (substr($name, 0, 9) === 'SETTINGS_') {
-    $key = strtolower(substr($name, 9));
-    $settings[$key] = $value;
-  }
-}
-
-$base_path = $app_root . '/' . $site_path;
-$servicesFile = $base_path . '/services.'.$env.'.yml';
-$settingsFile = $base_path . '/settings.'.$env.'.php';
-
-// Load services definition file.
-if (file_exists($servicesFile)) {
-    $settings['container_yamls'][] = $servicesFile;
-}
-
-// Load settings file.
-if (file_exists($settingsFile)) {
-  include $settingsFile;
-}
-
-$databases['default']['default'] = array (
-  'database' =>  getenv('DATABASE_NAME'),
-  'username' => getenv('DATABASE_USER'),
-  'password' => getenv('DATABASE_PASSWORD'),
-  'prefix' => '',
-  'host' => getenv('DATABASE_HOST'),
-  'port' => getenv('DATABASE_PORT'),
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-);
-
 /**
  * Load local development override configuration, if available.
  *
@@ -806,6 +752,17 @@ $databases['default']['default'] = array (
  * Keep this code block at the end of this file to take full effect.
  */
 #
-#if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-#  include $app_root . '/' . $site_path . '/settings.local.php';
-#}
+# if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+#   include $app_root . '/' . $site_path . '/settings.local.php';
+# }
+$databases['default']['default'] = array (
+  'database' => 'domafriki',
+  'username' => 'domafriki',
+  'password' => '8Sh@ljphU8',
+  'prefix' => '',
+  'host' => 'localhost',
+  'port' => '3306',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+);
+$settings['config_sync_directory'] = 'sites/default/files/config_cn_t-Nbt7YgP1nPrlOnw9udS5roL9ZstkGWpbhycuRNrM7S0I-Qnq3cGkMF0Sl-4mgsSwjCHvA/sync';
