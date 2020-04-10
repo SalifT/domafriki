@@ -11,7 +11,9 @@
         "cweagans/composer-patches": "^1.0",
         "goalgorilla/open_social": "dev-8.x-9.x",
         "php": "^7.2",
-        "monolog/monolog": "^1.17"
+        "monolog/monolog": "^1.17",
+        "drupal/console": "~1.0",
+        "drupal/console-dotenv": "^0.3.1"
     },
     "repositories": [
         {
