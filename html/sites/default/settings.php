@@ -784,17 +784,6 @@ if (file_exists($settingsFile)) {
   include $settingsFile;
 }
 
-$databases['default']['default'] = array (
-  'database' =>  getenv('DATABASE_NAME'),
-  'username' => getenv('DATABASE_USER'),
-  'password' => getenv('DATABASE_PASSWORD'),
-  'prefix' => '',
-  'host' => getenv('DATABASE_HOST'),
-  'port' => getenv('DATABASE_PORT'),
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-);
-
 /**
  * Load local development override configuration, if available.
  *
@@ -806,6 +795,6 @@ $databases['default']['default'] = array (
  * Keep this code block at the end of this file to take full effect.
  */
 #
-#if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-#  include $app_root . '/' . $site_path . '/settings.local.php';
-#}
+if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+  include $app_root . '/' . $site_path . '/settings.local.php';
+}
