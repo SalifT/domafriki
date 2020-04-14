@@ -1,0 +1,32 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+
+
+
+
+    // server -> local
+    {
+      "type":"php",
+      "request":"launch",
+      "name": "Map the files on the server to the right files on local machine",
+      "pathMappings": {
+      "/var/www/html": "${workspaceRoot}/www",
+      "/app": "${workspaceRoot}/app"
+      }
+    },
+
+    {
+      //"type": "pwa-chrome",
+      "type": "chrome",
+      "request": "launch",
+      "name": "Launch Chrome against localhost",
+      //"url": "http://localhost:8080",
+      "url": "http://localhost/Social/domafriki/html/",
+      "webRoot": "${workspaceFolder}"
+    }
+  ]
+}
