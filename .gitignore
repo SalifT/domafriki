@@ -10,6 +10,7 @@ vendor/
 
 # Ignore the local settings files
 html/sites/*/settings.local.php
+html/sites/*/settings.*.php
 html/sites/*/settings.php.original
 
 #Ignore Drupal file directory

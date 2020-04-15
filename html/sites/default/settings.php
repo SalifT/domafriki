@@ -785,6 +785,45 @@ if (file_exists($settingsFile)) {
 }
 
 /**
+ * Use the relevant environment constant and Drupal 8's override system
+ * within settings.php to enforce performance configurations based on
+ * the current environment settings:
+ * @see .env and .example.env files.
+ */
+if (isset($env)) {
+  switch($env) {
+     case 'live' :
+     case 'test' :
+     case 'livemaster' :
+       $config['system.performance']['cache']['page']['use_internal'] = TRUE;
+       $config['system.performance']['css']['preprocess'] = TRUE;
+       $config['system.performance']['css']['gzip'] = TRUE;
+       $config['system.performance']['js']['preprocess'] = TRUE;
+       $config['system.performance']['js']['gzip'] = TRUE;
+       $config['system.performance']['response']['gzip'] = TRUE;
+       $config['views.settings']['ui']['show']['sql_query']['enabled'] = FALSE;
+       $config['views.settings']['ui']['show']['performance_statistics'] = FALSE;
+       $config['system.logging']['error_level'] = 'none';
+       break;
+     case 'dev' :
+     case 'develop' :
+     default :
+       $config['system.performance']['cache']['page']['use_internal'] = FALSE;
+       $config['system.performance']['css']['preprocess'] = FALSE;
+       $config['system.performance']['css']['gzip'] = FALSE;
+       $config['system.performance']['js']['preprocess'] = FALSE;
+       $config['system.performance']['js']['gzip'] = FALSE;
+       $config['system.performance']['response']['gzip'] = FALSE;
+       $config['views.settings']['ui']['show']['sql_query']['enabled'] = TRUE;
+       $config['views.settings']['ui']['show']['performance_statistics'] = TRUE;
+       $config['system.logging']['error_level'] = 'all';
+       # $settings['cache']['bins']['render'] = 'cache.backend.null';
+       # $settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
+       break;
+     }
+ }
+
+ /**
  * Load local development override configuration, if available.
  *
  * Use settings.local.php to override variables on secondary (staging,
@@ -795,6 +834,8 @@ if (file_exists($settingsFile)) {
  * Keep this code block at the end of this file to take full effect.
  */
 #
-if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-  include $app_root . '/' . $site_path . '/settings.local.php';
+if (isset($env)) {
+  if (file_exists($app_root . '/' . $site_path . '/settings.{$env}.php')) {
+    include $app_root . '/' . $site_path . '/settings.{$env}.php';
+  }
 }
