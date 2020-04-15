@@ -12,6 +12,9 @@ vendor/
 html/sites/*/settings.local.php
 html/sites/*/settings.php.original
 
+# Ignore specifics environment ($env) settings files
+html/sites/*/settings.*.php
+
 #Ignore Drupal file directory
 /html/sites/*/files/
 
