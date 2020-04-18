@@ -771,10 +771,14 @@ $settingsFile = $base_path . '/settings.'.$env.'.php';
 
 /**
  * Load services definition file.
+ *
+ * @code
+ * $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
+ * @endcode
+ *
+ * Using the shortened code for loading services definition file.
+ * @see the $base_path and $servicesFile definitions above
  */
-#$settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
-#
-# The shortened code Load services definition file.
 if (file_exists($servicesFile)) {
     $settings['container_yamls'][] = $servicesFile;
 }
@@ -788,14 +792,20 @@ if (file_exists($servicesFile)) {
  * other things that should not happen on development and testing sites.
  *
  * Keep this code block at the end of this file to take full effect.
+ * The code is based on environment variable $env which takes is value from the
+ * environment name. For example: live, test, dev, etc.
+ *
+ * @code
+ * if (isset($env)) {
+ *   if (file_exists($app_root . '/' . $site_path . '/settings.'.$env.'.php')) {
+ *     include $app_root . '/' . $site_path . '/settings.'.$env.'.php';
+ *   }
+ * }
+ * @endcode
+ *
+ * We are Using the shortened code for loading settings file.
+ * @see $base_path and $settingsFile definitions above
  */
-#
-#if (isset($env)) {
-#  if (file_exists($app_root . '/' . $site_path . '/settings.'.$env.'.php')) {
-#    include $app_root . '/' . $site_path . '/settings.'.$env.'.php';
-#  }
-#}
-# The shortened code for Load settings file.
 if (file_exists($settingsFile)) {
   include $settingsFile;
 }
