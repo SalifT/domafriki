@@ -1,0 +1,23 @@
+uuid: 74c89612-b7e3-4c98-9755-97026a950da3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_group_description
+    - group.type.public_group
+  module:
+    - text
+_core:
+  default_config_hash: y1IJeRmV5eL0E_5olWWJTXwT_vOjFJqw4dYlcfnWnxE
+id: group.public_group.field_group_description
+field_name: field_group_description
+entity_type: group
+bundle: public_group
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

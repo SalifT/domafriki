@@ -1,0 +1,14 @@
+uuid: f825d590-a598-4eaf-afb3-703184228ab3
+name: 'Domafriki Master live'
+mail: salifu.traore@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /stream
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

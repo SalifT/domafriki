@@ -1,0 +1,13 @@
+uuid: 775b6154-acc5-4427-8e4e-690ed379671d
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 4WFYwmcnzOEXNkvgunZkvjXnjR6_JxH7iuvQB0horNs
+id: closed_group
+label: 'Closed group'
+description: 'This is a closed group. Users can only join by invitation and the content in the group is hidden from non members.'
+creator_membership: true
+creator_wizard: false
+creator_roles:
+  - closed_group-group_manager

@@ -1,0 +1,12 @@
+uuid: ef10e1fa-c0b9-4c8e-a6b2-b72f979f8478
+langcode: en
+status: true
+dependencies:
+  module:
+    - activity_creator
+_core:
+  default_config_hash: csrCjpnWE1-9fbYgCv8dEPEGahzEldvu9WvQv7uPqPw
+id: activity.notification
+label: Notification
+targetEntityType: activity
+cache: true

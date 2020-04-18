@@ -1,0 +1,83 @@
+uuid: 51bcb77d-3576-4432-adf0-50d1aa372f29
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.book.body
+    - field.field.node.book.field_book_comments
+    - field.field.node.book.field_book_image
+    - field.field.node.book.field_content_visibility
+    - field.field.node.book.field_files
+    - image.style.social_x_large
+    - node.type.book
+  module:
+    - image
+    - options
+    - user
+_core:
+  default_config_hash: JfGKXvVhufXag8R7Bckn7z2WtQa7qm_Q5K8AFJ5CarM
+id: node.book.teaser
+targetEntityType: node
+bundle: book
+mode: teaser
+content:
+  field_book_image:
+    type: image
+    weight: 0
+    label: above
+    settings:
+      image_style: social_x_large
+      image_link: content
+    third_party_settings: {  }
+    region: content
+  field_content_visibility:
+    type: list_default
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  flag_follow_content:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  groups_type_flexible_group:
+    label: above
+    weight: -5
+    region: content
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  groups_type_public_group:
+    label: above
+    weight: -5
+    region: content
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  groups_type_secret_group:
+    label: above
+    weight: -5
+    region: content
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  links:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  body: true
+  field_book_comments: true
+  field_files: true
+  groups: true
+  groups_type_closed_group: true
+  groups_type_open_group: true
+  search_api_excerpt: true
+  shariff_field: true

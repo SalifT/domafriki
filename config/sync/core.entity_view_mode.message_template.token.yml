@@ -1,0 +1,10 @@
+uuid: 6b24918d-177b-4d07-9f2b-902f984b77a4
+langcode: en
+status: true
+dependencies:
+  module:
+    - message
+id: message_template.token
+label: Token
+targetEntityType: message_template
+cache: true
