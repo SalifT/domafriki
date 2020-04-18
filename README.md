@@ -1,10 +1,10 @@
-# Setup localhost
+# Setup local development environment settings
 
 After cloning the repo
 
 ## Generating a .env file
 
-### Run the following drupal console command:
+### Run the following drupal console command to generate environment specific variables:
 
 ```
 /vendor/bin/drupal dotenv:init
@@ -12,11 +12,14 @@ After cloning the repo
 
 Follow the .env.example file in project root directory and answer to the questions
 according to your environment settings.
-Two new files will be automatically created:
+Tree new files will be automatically created:
   - settings.php
   - settings.php.original
+  - .env
 
-Edit the settings.php file and make sure it ends like the following:
+Edit the settings.php file and make sure it ends like the below code.
+In this example, your changes start from line: ```$config_directories['sync'] = '../config/sync';```
+to the end of the settings.php file.
 
 ```
 /**
@@ -57,20 +60,9 @@ foreach ($settings_drupal as $name => $value) {
   }
 }
 
-$base_path = $app_root . '/' . $site_path;
-$servicesFile = $base_path . '/services.'.$env.'.yml';
-$settingsFile = $base_path . '/settings.'.$env.'.php';
-
-// Load services definition file.
-if (file_exists($servicesFile)) {
-    $settings['container_yamls'][] = $servicesFile;
-}
-
-// Load settings file.
-if (file_exists($settingsFile)) {
-  include $settingsFile;
-}
-
+/**
+ * Load Database
+ */
 $databases['default']['default'] = array (
   'database' =>  getenv('DATABASE_NAME'),
   'username' => getenv('DATABASE_USER'),
@@ -83,6 +75,27 @@ $databases['default']['default'] = array (
 );
 
 /**
+ * Set variables for environment settings.php and services.yml files.
+ */
+$base_path = $app_root . '/' . $site_path;
+$servicesFile = $base_path . '/services.'.$env.'.yml';
+$settingsFile = $base_path . '/settings.'.$env.'.php';
+
+/**
+ * Load services definition file.
+ *
+ * @code
+ * $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
+ * @endcode
+ *
+ * Using the shortened code for loading services definition file.
+ * @see the $base_path and $servicesFile definitions above
+ */
+if (file_exists($servicesFile)) {
+    $settings['container_yamls'][] = $servicesFile;
+}
+
+/**
  * Load local development override configuration, if available.
  *
  * Use settings.local.php to override variables on secondary (staging,
@@ -91,27 +104,44 @@ $databases['default']['default'] = array (
  * other things that should not happen on development and testing sites.
  *
  * Keep this code block at the end of this file to take full effect.
+ * The code is based on environment variable $env which takes is value from the
+ * environment name. For example: live, test, dev, etc.
+ *
+ * @code
+ * if (isset($env)) {
+ *   if (file_exists($app_root . '/' . $site_path . '/settings.'.$env.'.php')) {
+ *     include $app_root . '/' . $site_path . '/settings.'.$env.'.php';
+ *   }
+ * }
+ * @endcode
+ *
+ * We are Using the shortened code for loading settings file.
+ * @see $base_path and $settingsFile definitions above
  */
-#
-#if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-#  include $app_root . '/' . $site_path . '/settings.local.php';
-#}
-
+if (file_exists($settingsFile)) {
+  include $settingsFile;
+}
 ```
 
-## Create settings.local.php
+## Create settings.local.php or settings.ENV_NAME.php file
 
-If you need to use the settings.local.php file in your environment.
-Change to the "dev" or feature branch.
-Create the settings.local.php and move to it the database credential part from settings.php as following :
+If you need to use an evironment specific settings.php file, for example:
+settings.local.php, settings.develop.php or settings.test.php where loca, develop, and test are environment name
+- Change to the environment branch, e.g.: "develop".
+- ```cd /sites/default```
+- Create the settings.develop.php file
+- and move to it the database credential and others specific settings from settings.php as following :
 
 ```
 <?php
 
+/**
+ * Load Database for DEVELOP
+ */
 $databases['default']['default'] = array(
-  'database' => '[PUT_YOUR_DB_NAME]',
-  'username' => '[PUT_YOUR_DB_USER]',
-  'password' => '[PUT_YOUR_DB_PASS]',
+  'database' => '[PUT_DEVELOP_DB_NAME]',
+  'username' => '[PUT_DEVELOP_DB_USER]',
+  'password' => '[PUT_DEVELOP_DB_PASS]',
   'prefix' => '',
   'host' => 'localhost',
   'port' => '3306',
@@ -119,21 +149,35 @@ $databases['default']['default'] = array(
   'driver' => 'mysql',
 );
 
-$settings['container_yamls'][] = DRUPAL_ROOT . '/sites/development.services.yml';
-
+/**
+ * Sets configuration for development
+ */
+$config['system.performance']['cache']['page']['use_internal'] = FALSE;
 $config['system.performance']['css']['preprocess'] = FALSE;
+$config['system.performance']['css']['gzip'] = FALSE;
 $config['system.performance']['js']['preprocess'] = FALSE;
+$config['system.performance']['js']['gzip'] = FALSE;
+$config['system.performance']['response']['gzip'] = FALSE;
+$config['views.settings']['ui']['show']['sql_query']['enabled'] = TRUE;
+$config['views.settings']['ui']['show']['performance_statistics'] = TRUE;
+$config['system.logging']['error_level'] = 'all';
 
-$settings['cache']['bins']['render'] = 'cache.backend.null';
-$settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
-
-$settings['cache']['bins']['page'] = 'cache.backend.null';
+# Only on development environment
+ $settings['cache']['bins']['render'] = 'cache.backend.null';
+ $settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
+ $settings['cache']['bins']['page'] = 'cache.backend.null';
 
 ```
 
-## Local development services
+## Create local development or environment specific services
 
-Ensure sites/development.services.yml is configured properly:
+If you use  sites/development.services.yml, ensure that it is configured properly and that the services ```$settings['container_yamls'][]``` is loaded by uncommenting this line of code: ```$settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';````
+in the settins.php on the settings.local.php file.
+
+Or you can use (recommended) an environment specific services:
+- Change to the environment branch, e.g.: "develop".
+- ```cd /sites/default```
+- Create the services.develop.yml file and configure it properly the same way as for development.services.yml
 
 ````
 # Local development services.
@@ -201,4 +245,4 @@ We are also available on Slack. Visit https://www.drupal.org/slack to see how yo
 ### **Community hours**
  Every week we are available on Slack on:
  - Wednesday between 16:00 and 17:00 Europe/Amsterdam Timezone
-- Friday between 10:00 and 11:00 Europe/Amsterdam Timezone
+ - Friday between 10:00 and 11:00 Europe/Amsterdam Timezone
