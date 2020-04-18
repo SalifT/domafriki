@@ -648,11 +648,6 @@ $settings['file_private_path'] = '../private';
 # $config['system.performance']['fast_404']['html'] = '<!DOCTYPE html><html><head><title>404 Not Found</title></head><body><h1>Not Found</h1><p>The requested URL "@path" was not found on this server.</p></body></html>';
 
 /**
- * Load services definition file.
- */
-$settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
-
-/**
  * Override the default service container class.
  *
  * This is useful for example to trace the service container for performance
@@ -774,56 +769,21 @@ $base_path = $app_root . '/' . $site_path;
 $servicesFile = $base_path . '/services.'.$env.'.yml';
 $settingsFile = $base_path . '/settings.'.$env.'.php';
 
-// Load services definition file.
+/**
+ * Load services definition file.
+ *
+ * @code
+ * $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
+ * @endcode
+ *
+ * Using the shortened code for loading services definition file.
+ * @see the $base_path and $servicesFile definitions above
+ */
 if (file_exists($servicesFile)) {
     $settings['container_yamls'][] = $servicesFile;
 }
 
-// Load settings file.
-if (file_exists($settingsFile)) {
-  include $settingsFile;
-}
-
 /**
- * Use the relevant environment constant and Drupal 8's override system
- * within settings.php to enforce performance configurations based on
- * the current environment settings:
- * @see .env and .example.env files.
- */
-if (isset($env)) {
-  switch($env) {
-     case 'live' :
-     case 'test' :
-     case 'livemaster' :
-       $config['system.performance']['cache']['page']['use_internal'] = TRUE;
-       $config['system.performance']['css']['preprocess'] = TRUE;
-       $config['system.performance']['css']['gzip'] = TRUE;
-       $config['system.performance']['js']['preprocess'] = TRUE;
-       $config['system.performance']['js']['gzip'] = TRUE;
-       $config['system.performance']['response']['gzip'] = TRUE;
-       $config['views.settings']['ui']['show']['sql_query']['enabled'] = FALSE;
-       $config['views.settings']['ui']['show']['performance_statistics'] = FALSE;
-       $config['system.logging']['error_level'] = 'none';
-       break;
-     case 'dev' :
-     case 'develop' :
-     default :
-       $config['system.performance']['cache']['page']['use_internal'] = FALSE;
-       $config['system.performance']['css']['preprocess'] = FALSE;
-       $config['system.performance']['css']['gzip'] = FALSE;
-       $config['system.performance']['js']['preprocess'] = FALSE;
-       $config['system.performance']['js']['gzip'] = FALSE;
-       $config['system.performance']['response']['gzip'] = FALSE;
-       $config['views.settings']['ui']['show']['sql_query']['enabled'] = TRUE;
-       $config['views.settings']['ui']['show']['performance_statistics'] = TRUE;
-       $config['system.logging']['error_level'] = 'all';
-       # $settings['cache']['bins']['render'] = 'cache.backend.null';
-       # $settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
-       break;
-     }
- }
-
- /**
  * Load local development override configuration, if available.
  *
  * Use settings.local.php to override variables on secondary (staging,
@@ -832,10 +792,20 @@ if (isset($env)) {
  * other things that should not happen on development and testing sites.
  *
  * Keep this code block at the end of this file to take full effect.
+ * The code is based on environment variable $env which takes is value from the
+ * environment name. For example: live, test, dev, etc.
+ *
+ * @code
+ * if (isset($env)) {
+ *   if (file_exists($app_root . '/' . $site_path . '/settings.'.$env.'.php')) {
+ *     include $app_root . '/' . $site_path . '/settings.'.$env.'.php';
+ *   }
+ * }
+ * @endcode
+ *
+ * We are Using the shortened code for loading settings file.
+ * @see $base_path and $settingsFile definitions above
  */
-#
-if (isset($env)) {
-  if (file_exists($app_root . '/' . $site_path . '/settings.{$env}.php')) {
-    include $app_root . '/' . $site_path . '/settings.{$env}.php';
-  }
+if (file_exists($settingsFile)) {
+  include $settingsFile;
 }
