@@ -1,0 +1,8 @@
+uuid: 005857e8-c5a6-4ae0-929e-03410f50f5b1
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Cf0l0EFMZpWO3yDYlbx2cA5Ug_Y7TkCUjZW0aM0q1jM
+id: email
+label: Email

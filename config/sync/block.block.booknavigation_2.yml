@@ -1,0 +1,31 @@
+uuid: 16e702ff-5782-49de-b5b7-0e6b1fd26573
+langcode: en
+status: true
+dependencies:
+  module:
+    - book
+    - node
+  theme:
+    - socialblue
+_core:
+  default_config_hash: VmWM44zjZhOdhge4MgqTs3AB6kJIuOex20wwnv5BpMo
+id: booknavigation_2
+theme: socialblue
+region: complementary_top
+weight: 0
+provider: null
+plugin: book_navigation
+settings:
+  id: book_navigation
+  label: 'Table of contents'
+  provider: book
+  label_display: visible
+  block_mode: 'book pages'
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      book: book
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

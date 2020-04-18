@@ -1,0 +1,14 @@
+uuid: c70a4d8e-8980-4b7a-ab86-2c6d725fc00b
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: KylZuSP5ti_tZ6ThtzBcv32mo5qpiEjeci9XQZHZuUo
+label: 'Profile medium'
+id: profile_medium
+description: 'Medium sized profile image'
+aspect_ratio: '44:44'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

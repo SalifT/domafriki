@@ -1,0 +1,23 @@
+uuid: bbe075a6-907d-4da8-86c8-309ea4086ce4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_profile_phone_number
+    - profile.type.profile
+  module:
+    - telephone
+_core:
+  default_config_hash: qtv8d8Rhp8UEsD-dALsbeZ_v1bsWPHDnwqh65wlkLdc
+id: profile.profile.field_profile_phone_number
+field_name: field_profile_phone_number
+entity_type: profile
+bundle: profile
+label: 'Phone number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

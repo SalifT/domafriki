@@ -1,0 +1,26 @@
+uuid: 765422ad-2f24-48d2-82bc-d63faad5d520
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.user.register
+  module:
+    - user
+_core:
+  default_config_hash: q2q1Ylfh4nQOHKbKS9jCKipcNXijytSip0H1DBqyjNE
+id: user.user.register
+targetEntityType: user
+bundle: user
+mode: register
+content:
+  account:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  contact: true
+  groups: true
+  language: true
+  profile_profiles: true
+  timezone: true

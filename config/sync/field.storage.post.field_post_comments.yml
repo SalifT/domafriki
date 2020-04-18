@@ -1,0 +1,22 @@
+uuid: 400f0783-9d3d-4eef-ae47-9d838e8b49e3
+langcode: en
+status: true
+dependencies:
+  module:
+    - comment
+    - social_post
+_core:
+  default_config_hash: yPBZ_8gt5KU5pB3bNoGNUIP1qLLDd2paFehF1n4JiR4
+id: post.field_post_comments
+field_name: field_post_comments
+entity_type: post
+type: comment
+settings:
+  comment_type: post_comment
+module: comment
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

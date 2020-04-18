@@ -1,0 +1,12 @@
+uuid: c234b368-9f67-4d8b-a7d6-3968ba9654ac
+langcode: en
+status: true
+dependencies:
+  module:
+    - profile
+_core:
+  default_config_hash: BTdGlIJIEy2lKg8NThdIuHBntYYS0fx_xoBMKbrE71Y
+id: profile.small
+label: 'Small Avatar'
+targetEntityType: profile
+cache: true

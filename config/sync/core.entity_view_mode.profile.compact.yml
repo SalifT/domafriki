@@ -1,0 +1,12 @@
+uuid: 46415c90-2568-44de-a7d9-7a85c5099c35
+langcode: en
+status: true
+dependencies:
+  module:
+    - profile
+_core:
+  default_config_hash: wsM3aj4sELA4KSp4SXpuzd6jEXw-1MuLSBvaydL0V6k
+id: profile.compact
+label: 'Compact Avatar'
+targetEntityType: profile
+cache: true

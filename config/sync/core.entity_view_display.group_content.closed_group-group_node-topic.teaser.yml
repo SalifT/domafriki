@@ -1,0 +1,26 @@
+uuid: 00fa971e-bdcf-4bb6-a2a1-074c46358c5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.group_content.teaser
+    - group.content_type.closed_group-group_node-topic
+_core:
+  default_config_hash: IYsmJ-Op8skfd1OSjIwrewBxul9_tiniSIoPLsD3rSM
+id: group_content.closed_group-group_node-topic.teaser
+targetEntityType: group_content
+bundle: closed_group-group_node-topic
+mode: teaser
+content:
+  entity_id:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  search_api_excerpt: true
+  uid: true

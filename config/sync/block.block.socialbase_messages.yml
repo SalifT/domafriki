@@ -1,0 +1,22 @@
+uuid: 2e96669d-7905-467f-8e6b-a04366f8ca22
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - socialbase
+_core:
+  default_config_hash: skAEvDrG6ROzkkvY6AbJcOk-JUuv1al_Tcetvcf7ya0
+id: socialbase_messages
+theme: socialbase
+region: content
+weight: -17
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }
