@@ -16,6 +16,9 @@ html/sites/*/settings.php.original
 # Ignore specifics environment ($env) settings files
 html/sites/*/settings.*.php
 
+# Ignore specifics environment ($env) services files
+html/sites/*/services.*.yml
+
 #Ignore Drupal file directory
 /html/sites/*/files/
 
