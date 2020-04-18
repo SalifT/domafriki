@@ -1,4 +1,4 @@
-# Setup local development environment settings
+# Local development environment settings
 
 After cloning the repo
 
