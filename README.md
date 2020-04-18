@@ -171,7 +171,7 @@ $config['system.logging']['error_level'] = 'all';
 
 ## Create local development or environment specific services
 
-If you use  sites/development.services.yml, ensure that it is configured properly and that the services ```$settings['container_yamls'][]``` is loaded by uncommenting this line of code: ```$settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';````
+If you use  sites/development.services.yml, ensure that it is configured properly and that the services ```$settings['container_yamls'][]``` is loaded by uncommenting this line of code: ```$settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';```
 in the settins.php on the settings.local.php file.
 
 Or you can use (recommended) an environment specific services:
