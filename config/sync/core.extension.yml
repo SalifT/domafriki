@@ -38,7 +38,9 @@ module:
   file_mdm_font: 0
   filter: 0
   flag: 0
+  ginvite: 0
   gnode: 0
+  grequest: 0
   group: 0
   group_core_comments: 0
   gvbo: 0
@@ -81,9 +83,12 @@ module:
   social_event_type: 0
   social_featured_items: 0
   social_file_private: 0
+  social_flexible_group_featured: 0
   social_follow_content: 0
   social_font: 0
   social_group_gvbo: 0
+  social_group_invite: 0
+  social_group_request: 0
   social_landing_page: 0
   social_lets_connect: 0
   social_lets_connect_contact: 0
