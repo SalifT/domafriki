@@ -266,7 +266,7 @@ $databases = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = 'eBn2z0k1JCKnDO7jI57GmPSG8kQvpy1HtMNK6pnQZRJjpMsTdiJnu8qwMrhrKW-2ViMqiOp-ag';
+$settings['hash_salt'] = 'P8QzLtqYhB0u7YYUoPIdFv1naenpjk3SCdeA_NQb0MvrLF9mJfy5bylKy-WfVOseX0esTKANJQ';
 
 /**
  * Deployment identifier.
@@ -520,7 +520,7 @@ if ($settings['hash_salt']) {
  * See https://www.drupal.org/documentation/modules/file for more information
  * about securing private files.
  */
-# $settings['file_private_path'] = '';
+$settings['file_private_path'] = '../private';
 
 /**
  * Temporary file path:
@@ -648,11 +648,6 @@ if ($settings['hash_salt']) {
 # $config['system.performance']['fast_404']['html'] = '<!DOCTYPE html><html><head><title>404 Not Found</title></head><body><h1>Not Found</h1><p>The requested URL "@path" was not found on this server.</p></body></html>';
 
 /**
- * Load services definition file.
- */
-$settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
-
-/**
  * Override the default service container class.
  *
  * This is useful for example to trace the service container for performance
@@ -741,6 +736,53 @@ $settings['entity_update_batch_size'] = 50;
  */
 $settings['entity_update_backup'] = TRUE;
 
+$config_directories['sync'] = '../config/sync';
+
+// Load .env file if exists
+if (file_exists(dirname(DRUPAL_ROOT) . '/.env')) {
+  // Load environment
+  $dotenv = new \Dotenv\Dotenv(dirname(DRUPAL_ROOT));
+  $dotenv->load();
+}
+
+# Load environment
+$env = getenv('ENVIRONMENT');
+
+# Load key/value settings
+$settings_drupal = array_filter(
+  $_SERVER,
+  function($key) {
+      return  strpos($key, 'SETTINGS_') === 0;
+  },
+  ARRAY_FILTER_USE_KEY
+);
+
+# Set key/value settings
+foreach ($settings_drupal as $name => $value) {
+  if (substr($name, 0, 9) === 'SETTINGS_') {
+    $key = strtolower(substr($name, 9));
+    $settings[$key] = $value;
+  }
+}
+
+$base_path = $app_root . '/' . $site_path;
+$servicesFile = $base_path . '/services.'.$env.'.yml';
+$settingsFile = $base_path . '/settings.'.$env.'.php';
+
+/**
+ * Load services definition file.
+ *
+ * @code
+ * $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
+ * @endcode
+ *
+ * Using the shortened code for loading services definition file.
+ * @see the $base_path and $servicesFile definitions above
+ */
+if (file_exists($servicesFile)) {
+    $settings['container_yamls'][] = $servicesFile;
+}
+
 /**
  * Load local development override configuration, if available.
  *
@@ -750,19 +792,20 @@ $settings['entity_update_backup'] = TRUE;
  * other things that should not happen on development and testing sites.
  *
  * Keep this code block at the end of this file to take full effect.
+ * The code is based on environment variable $env which takes is value from the
+ * environment name. For example: live, test, dev, etc.
+ *
+ * @code
+ * if (isset($env)) {
+ *   if (file_exists($app_root . '/' . $site_path . '/settings.'.$env.'.php')) {
+ *     include $app_root . '/' . $site_path . '/settings.'.$env.'.php';
+ *   }
+ * }
+ * @endcode
+ *
+ * We are Using the shortened code for loading settings file.
+ * @see $base_path and $settingsFile definitions above
  */
-#
-# if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-#   include $app_root . '/' . $site_path . '/settings.local.php';
-# }
-$databases['default']['default'] = array (
-  'database' => 'domafriki',
-  'username' => 'domafriki',
-  'password' => '8Sh@ljphU8',
-  'prefix' => '',
-  'host' => 'localhost',
-  'port' => '3306',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-);
-$settings['config_sync_directory'] = 'sites/default/files/config_cn_t-Nbt7YgP1nPrlOnw9udS5roL9ZstkGWpbhycuRNrM7S0I-Qnq3cGkMF0Sl-4mgsSwjCHvA/sync';
+if (file_exists($settingsFile)) {
+  include $settingsFile;
+}
