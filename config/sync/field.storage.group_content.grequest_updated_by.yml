@@ -1,0 +1,22 @@
+uuid: 9b55fbdf-37b1-413f-ab68-4ef176ff79f7
+langcode: en
+status: true
+dependencies:
+  module:
+    - group
+    - user
+_core:
+  default_config_hash: TlXJmcOmHrVFzc6A_QdXBjsRasK_nNTrIxWtBFr_C2I
+id: group_content.grequest_updated_by
+field_name: grequest_updated_by
+entity_type: group_content
+type: entity_reference
+settings:
+  target_type: user
+module: core
+locked: true
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: true
+custom_storage: false

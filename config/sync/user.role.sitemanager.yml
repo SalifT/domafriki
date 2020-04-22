@@ -36,6 +36,7 @@ permissions:
   - 'administer comments'
   - 'administer menu'
   - 'administer navigation settings'
+  - 'administer node statistics settings'
   - 'administer nodes'
   - 'administer own comments'
   - 'administer post entities'

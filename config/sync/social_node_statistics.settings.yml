@@ -1,0 +1,7 @@
+node_types:
+  event: event
+  topic: topic
+max_age: 900
+min_views: 5
+_core:
+  default_config_hash: U3mPQgVoUzX01kaOqIf_Nsll8qdDjqwxsK6sJuZbwko
