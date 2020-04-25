@@ -31,6 +31,7 @@ third_party_settings:
         required_fields: true
         id: visibility
         classes: card
+      region: content
     group_description:
       children:
         - body
@@ -43,6 +44,7 @@ third_party_settings:
         classes: ''
         id: ''
         required_fields: true
+      region: content
     group_title:
       children:
         - title
@@ -56,6 +58,7 @@ third_party_settings:
         classes: ''
         id: ''
         required_fields: true
+      region: content
     group_attachments:
       children:
         - field_files
@@ -68,6 +71,7 @@ third_party_settings:
         classes: ''
         id: ''
         required_fields: true
+      region: content
 _core:
   default_config_hash: 8RR74PIAnyOR8ewqOegAVgje9jxvobtrZLqOc4iOGOw
 id: node.book.default

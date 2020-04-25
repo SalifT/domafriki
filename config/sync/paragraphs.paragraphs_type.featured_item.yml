@@ -1,0 +1,11 @@
+uuid: a8e1c62c-b2ed-4d64-b937-afd9de933533
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: lic6JMPOYu0gNynOjX5KxhdH40rCH1v3K1iwCYLcfz8
+id: featured_item
+label: 'Featured Item'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

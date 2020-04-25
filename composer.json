@@ -65,6 +65,11 @@
                 "type:drupal-drush"
             ]
         },
-        "enable-patching": true
+        "enable-patching": true,
+        "patches": {
+            "drupal/entity_reference_revisions": {
+              "Manual cleanup process for obsolete composite entities": "https://www.drupal.org/files/issues/2019-09-19/manual_cleanup_obsolote_composites-3016388-63.patch"
+            }
+        }
     }
 }

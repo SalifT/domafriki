@@ -33,6 +33,7 @@ visibility:
       closed_group: closed_group
       open_group: open_group
       public_group: public_group
+      flexible_group: flexible_group
     negate: false
     context_mapping:
       group: '@group.group_route_context:group'
