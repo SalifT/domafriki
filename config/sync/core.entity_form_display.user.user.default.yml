@@ -19,6 +19,7 @@ third_party_settings:
         required_fields: true
         id: ''
         classes: ''
+      region: content
     group_locale_settings:
       children:
         - timezone
@@ -31,6 +32,7 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Locale settings'
+      region: content
 _core:
   default_config_hash: 0nZ2z-1drifgtazQ7sCHMq5tzD4JvQ5oYqoHa0z3koI
 id: user.user.default
