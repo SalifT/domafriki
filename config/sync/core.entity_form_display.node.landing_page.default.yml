@@ -26,6 +26,7 @@ third_party_settings:
         id: title
         classes: card
       label: Title
+      region: content
     group_sections:
       children:
         - field_landing_page_section
@@ -39,6 +40,7 @@ third_party_settings:
         id: sections
         classes: card
       label: Sections
+      region: content
 _core:
   default_config_hash: ZmNvrc200HUdqH2M5CVzebvr-UKPAQWa7mq4XhhrYNU
 id: node.landing_page.default

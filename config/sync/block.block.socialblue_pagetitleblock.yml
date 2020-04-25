@@ -28,6 +28,7 @@ visibility:
       event: event
       page: page
       topic: topic
+      book: book
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'

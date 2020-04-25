@@ -62,6 +62,19 @@ third_party_settings:
         required_fields: true
       label: Settings
       region: content
+    group_request_membership:
+      children:
+        - allow_request
+      parent_name: ''
+      weight: 99
+      label: 'Request membership'
+      format_type: fieldset
+      format_settings:
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: false
+      region: content
 _core:
   default_config_hash: o6-nBnmCgRGCaHUZj2veQpAOLMCl7TLd_QD2rW2k-ag
 id: group.flexible_group.default
@@ -69,6 +82,13 @@ targetEntityType: group
 bundle: flexible_group
 mode: default
 content:
+  allow_request:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 99
+    region: content
+    third_party_settings: {  }
   field_group_address:
     weight: 6
     settings: {  }
