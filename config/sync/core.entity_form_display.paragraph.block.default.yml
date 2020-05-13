@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.block.field_block_link
     - field.field.paragraph.block.field_block_reference
+    - field.field.paragraph.block.field_block_reference_primary_2
     - field.field.paragraph.block.field_block_reference_secondary
     - field.field.paragraph.block.field_block_title
     - paragraphs.paragraphs_type.block
@@ -19,7 +20,7 @@ bundle: block
 mode: default
 content:
   field_block_link:
-    weight: 3
+    weight: 4
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -31,14 +32,25 @@ content:
     settings:
       plugin_id: ''
       settings: {  }
+      configuration_form: full
     third_party_settings: {  }
     type: block_field_default
     region: content
-  field_block_reference_secondary:
+  field_block_reference_primary_2:
     weight: 2
     settings:
       plugin_id: ''
       settings: {  }
+      configuration_form: full
+    third_party_settings: {  }
+    type: block_field_default
+    region: content
+  field_block_reference_secondary:
+    weight: 3
+    settings:
+      plugin_id: ''
+      settings: {  }
+      configuration_form: full
     third_party_settings: {  }
     type: block_field_default
     region: content

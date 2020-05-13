@@ -1,6 +1,7 @@
 /bin
 /html/core
 /html/modules/contrib
+/html/modules/custom
 /html/profiles/contrib
 /html/themes/contrib
 /html/sites/default/files

@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.block.field_block_link
     - field.field.paragraph.block.field_block_reference
+    - field.field.paragraph.block.field_block_reference_primary_2
     - field.field.paragraph.block.field_block_reference_secondary
     - field.field.paragraph.block.field_block_title
     - paragraphs.paragraphs_type.block
@@ -20,7 +21,7 @@ bundle: block
 mode: preview
 content:
   field_block_link:
-    weight: 3
+    weight: 4
     label: inline
     settings:
       trim_length: 80
@@ -38,9 +39,16 @@ content:
     label: inline
     settings: {  }
     third_party_settings: {  }
-  field_block_reference_secondary:
+  field_block_reference_primary_2:
     type: block_label
     weight: 2
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_block_reference_secondary:
+    type: block_label
+    weight: 3
     region: content
     label: inline
     settings: {  }
