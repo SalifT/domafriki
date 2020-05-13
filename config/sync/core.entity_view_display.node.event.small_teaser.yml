@@ -28,7 +28,7 @@ mode: small_teaser
 content:
   field_event_date:
     type: datetime_default
-    weight: 0
+    weight: 1
     label: hidden
     settings:
       timezone_override: ''
@@ -46,6 +46,15 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+  field_event_image:
+    label: hidden
+    region: content
+    settings:
+      image_link: content
+      image_style: social_medium
+    third_party_settings: {  }
+    type: image
+    weight: 0
 hidden:
   body: true
   field_content_visibility: true
@@ -53,7 +62,6 @@ hidden:
   field_event_comments: true
   field_event_date_end: true
   field_event_enroll: true
-  field_event_image: true
   field_event_location: true
   field_event_type: true
   field_files: true

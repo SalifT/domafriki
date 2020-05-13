@@ -1,4 +1,4 @@
-uuid: f9997b8d-2253-4d40-b1f7-56d5830644d1
+uuid: 1222c50a-b11e-4ccc-8e2b-9a127817d542
 langcode: en
 status: true
 dependencies:
@@ -6,15 +6,15 @@ dependencies:
     - block_content
     - entity_reference_revisions
     - paragraphs
-id: block_content.field_featured_items
-field_name: field_featured_items
+id: block_content.field_featured
+field_name: field_featured
 entity_type: block_content
 type: entity_reference_revisions
 settings:
   target_type: paragraph
 module: entity_reference_revisions
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false
