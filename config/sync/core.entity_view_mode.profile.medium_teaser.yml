@@ -1,0 +1,10 @@
+uuid: f30cf238-87f6-405d-9b69-467086097a84
+langcode: en
+status: true
+dependencies:
+  module:
+    - profile
+id: profile.medium_teaser
+label: 'Medium Teaser'
+targetEntityType: profile
+cache: true
