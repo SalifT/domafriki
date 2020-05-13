@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.block.field_block_link
     - field.field.paragraph.block.field_block_reference
+    - field.field.paragraph.block.field_block_reference_primary_2
     - field.field.paragraph.block.field_block_reference_secondary
     - field.field.paragraph.block.field_block_title
     - paragraphs.paragraphs_type.block
@@ -19,7 +20,7 @@ bundle: block
 mode: default
 content:
   field_block_link:
-    weight: 3
+    weight: 4
     label: hidden
     settings:
       trim_length: 80
@@ -37,8 +38,15 @@ content:
     third_party_settings: {  }
     type: block_field
     region: content
-  field_block_reference_secondary:
+  field_block_reference_primary_2:
     weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: block_field
+    region: content
+  field_block_reference_secondary:
+    weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }

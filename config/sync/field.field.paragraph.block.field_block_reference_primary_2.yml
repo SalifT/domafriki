@@ -1,0 +1,24 @@
+uuid: 79e61f17-5e78-42ef-a57f-a2be524506dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_block_reference_primary_2
+    - paragraphs.paragraphs_type.block
+  module:
+    - block_field
+id: paragraph.block.field_block_reference_primary_2
+field_name: field_block_reference_primary_2
+entity_type: paragraph
+bundle: block
+label: Primary_2
+description: 'Select a Block from a list to include'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  plugin_ids:
+    activity_stats_block: activity_stats_block
+    activity_overview_block: activity_overview_block
+field_type: block_field
