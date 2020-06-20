@@ -12,6 +12,7 @@
         "goalgorilla/open_social": "8.x-9.x-dev",
         "php": "^7.2",
         "monolog/monolog": "^1.17",
+        "drupal/bootstrap_paragraphs": "^2.0@beta",
         "drupal/console": "~1.0",
         "drupal/console-dotenv": "^0.3.1",
         "drush/drush": "^10.2",
@@ -71,5 +72,8 @@
               "Manual cleanup process for obsolete composite entities": "https://www.drupal.org/files/issues/2019-09-19/manual_cleanup_obsolote_composites-3016388-63.patch"
             }
         }
+    },
+    "require-dev": {
+        "drupal/config_devel": "^1.7"
     }
 }
