@@ -6,8 +6,14 @@ dependencies:
     - field.storage.paragraph.field_section_paragraph
     - paragraphs.paragraphs_type.accordion
     - paragraphs.paragraphs_type.block
+    - paragraphs.paragraphs_type.bp_carousel
+    - paragraphs.paragraphs_type.bp_column_wrapper
+    - paragraphs.paragraphs_type.bp_columns
+    - paragraphs.paragraphs_type.bp_columns_three_uneven
+    - paragraphs.paragraphs_type.bp_columns_two_uneven
+    - paragraphs.paragraphs_type.bp_modal
+    - paragraphs.paragraphs_type.bp_tabs
     - paragraphs.paragraphs_type.featured
-    - paragraphs.paragraphs_type.featured_items
     - paragraphs.paragraphs_type.hero
     - paragraphs.paragraphs_type.hero_small
     - paragraphs.paragraphs_type.introduction
@@ -32,12 +38,18 @@ settings:
     negate: 0
     target_bundles:
       featured: featured
-      featured_items: featured_items
       block: block
       hero: hero
       hero_small: hero_small
       introduction: introduction
       accordion: accordion
+      bp_carousel: bp_carousel
+      bp_columns: bp_columns
+      bp_columns_three_uneven: bp_columns_three_uneven
+      bp_columns_two_uneven: bp_columns_two_uneven
+      bp_column_wrapper: bp_column_wrapper
+      bp_modal: bp_modal
+      bp_tabs: bp_tabs
     target_bundles_drag_drop:
       section:
         weight: 3
@@ -60,4 +72,61 @@ settings:
       accordion:
         enabled: true
         weight: 8
+      accordion_item:
+        weight: 28
+        enabled: false
+      bp_accordion:
+        weight: 30
+        enabled: false
+      bp_accordion_section:
+        weight: 31
+        enabled: false
+      bp_blank:
+        weight: 32
+        enabled: false
+      bp_block:
+        weight: 33
+        enabled: false
+      bp_carousel:
+        enabled: true
+        weight: 34
+      bp_columns:
+        enabled: true
+        weight: 35
+      bp_columns_three_uneven:
+        enabled: true
+        weight: 36
+      bp_columns_two_uneven:
+        enabled: true
+        weight: 37
+      bp_column_wrapper:
+        enabled: true
+        weight: 38
+      bp_image:
+        weight: 39
+        enabled: false
+      bp_modal:
+        enabled: true
+        weight: 40
+      bp_simple:
+        weight: 41
+        enabled: false
+      bp_tabs:
+        enabled: true
+        weight: 42
+      bp_tab_section:
+        weight: 43
+        enabled: false
+      bp_view:
+        weight: 44
+        enabled: false
+      button:
+        weight: 45
+        enabled: false
+      featured_item:
+        weight: 47
+        enabled: false
+      featured_items:
+        weight: 48
+        enabled: false
 field_type: entity_reference_revisions

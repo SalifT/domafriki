@@ -1,0 +1,21 @@
+uuid: a9350c8c-127d-474f-8c17-d6d38dfc1ba9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.bp_background
+    - paragraphs.paragraphs_type.introduction
+  module:
+    - options
+id: paragraph.introduction.bp_background
+field_name: bp_background
+entity_type: paragraph
+bundle: introduction
+label: Background
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

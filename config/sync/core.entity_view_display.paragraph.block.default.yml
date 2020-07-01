@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.block.bp_background
+    - field.field.paragraph.block.bp_width
     - field.field.paragraph.block.field_block_link
     - field.field.paragraph.block.field_block_reference
     - field.field.paragraph.block.field_block_reference_primary_2
@@ -12,6 +14,7 @@ dependencies:
   module:
     - block_field
     - link
+    - options
 _core:
   default_config_hash: SR2YBUbHjJrXJOcCZKVGY-fZ-ptg83W2KbrjqdseU68
 id: paragraph.block.default
@@ -19,8 +22,24 @@ targetEntityType: paragraph
 bundle: block
 mode: default
 content:
+  bp_background:
+    0: null
+    weight: 10
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  bp_width:
+    0: null
+    weight: 11
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_block_link:
-    weight: 4
+    weight: 6
     label: hidden
     settings:
       trim_length: 80
@@ -32,28 +51,35 @@ content:
     type: link
     region: content
   field_block_reference:
-    weight: 1
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: block_field
-    region: content
-  field_block_reference_primary_2:
-    weight: 2
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: block_field
-    region: content
-  field_block_reference_secondary:
     weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: block_field
     region: content
+  field_block_reference_primary_2:
+    0:
+      weight: 2
+      label: hidden
+      settings: {  }
+      third_party_settings: {  }
+      type: block_field
+      region: content
+    weight: 12
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: block_field
+    region: content
+  field_block_reference_secondary:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: block_field
+    region: content
   field_block_title:
-    weight: 0
+    weight: 2
     label: hidden
     settings:
       link_to_entity: false

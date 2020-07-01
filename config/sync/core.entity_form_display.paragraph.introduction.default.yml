@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.introduction.bp_background
+    - field.field.paragraph.introduction.bp_width
     - field.field.paragraph.introduction.field_introduction_link_an
     - field.field.paragraph.introduction.field_introduction_link_lu
     - field.field.paragraph.introduction.field_introduction_text
@@ -18,6 +20,18 @@ targetEntityType: paragraph
 bundle: introduction
 mode: default
 content:
+  bp_background:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  bp_width:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_introduction_link_an:
     weight: 2
     settings:

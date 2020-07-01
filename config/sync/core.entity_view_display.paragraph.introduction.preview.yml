@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.introduction.bp_background
+    - field.field.paragraph.introduction.bp_width
     - field.field.paragraph.introduction.field_introduction_link_an
     - field.field.paragraph.introduction.field_introduction_link_lu
     - field.field.paragraph.introduction.field_introduction_text
@@ -59,4 +61,6 @@ content:
     type: string
     region: content
 hidden:
+  bp_background: true
+  bp_width: true
   search_api_excerpt: true
