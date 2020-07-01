@@ -3,12 +3,15 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.accordion.bp_background
+    - field.field.paragraph.accordion.bp_width
     - field.field.paragraph.accordion.field_accord_description
     - field.field.paragraph.accordion.field_accord_item
     - field.field.paragraph.accordion.field_accord_title
     - paragraphs.paragraphs_type.accordion
   module:
     - entity_reference_revisions
+    - options
     - text
 _core:
   default_config_hash: L-ZBeCWWTfzCowlvmpKWVKDFKq18ex7hXwRo2ZIMO5c
@@ -17,8 +20,22 @@ targetEntityType: paragraph
 bundle: accordion
 mode: default
 content:
-  field_accord_description:
+  bp_background:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  bp_width:
     weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_accord_description:
+    weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -26,7 +43,7 @@ content:
     region: content
   field_accord_item:
     type: entity_reference_revisions_entity_view
-    weight: 2
+    weight: 4
     label: hidden
     settings:
       view_mode: default
@@ -34,7 +51,7 @@ content:
     third_party_settings: {  }
     region: content
   field_accord_title:
-    weight: 0
+    weight: 2
     label: hidden
     settings:
       link_to_entity: false

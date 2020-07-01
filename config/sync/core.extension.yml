@@ -4,6 +4,7 @@ module:
   activity_logger: 0
   activity_send: 0
   activity_send_email: 0
+  activity_stats: 0
   activity_viewer: 0
   address: 0
   admin_toolbar: 0
@@ -13,11 +14,13 @@ module:
   block_content: 0
   block_field: 0
   book: 0
+  bootstrap_paragraphs: 0
   breakpoint: 0
   ckeditor: 0
   color: 0
   comment: 0
   config: 0
+  config_devel: 0
   config_update: 0
   crop: 0
   datetime: 0
@@ -48,6 +51,7 @@ module:
   image_effects: 0
   image_widget_crop: 0
   inline_form_errors: 0
+  kint: 0
   like_and_dislike: 0
   link: 0
   mailsystem: 0
@@ -62,6 +66,7 @@ module:
   path_alias: 0
   profile: 0
   r4032login: 0
+  release_tracker: 0
   rest: 0
   role_delegation: 0
   search_api: 0
@@ -82,6 +87,7 @@ module:
   social_editor: 0
   social_event: 0
   social_event_type: 0
+  social_featured_content: 0
   social_featured_items: 0
   social_file_private: 0
   social_flexible_group_featured: 0
@@ -91,6 +97,7 @@ module:
   social_group_invite: 0
   social_group_request: 0
   social_landing_page: 0
+  social_landing_page_enhancer: 0
   social_lets_connect: 0
   social_lets_connect_contact: 0
   social_lets_connect_usage: 0
@@ -125,6 +132,7 @@ module:
   views_bulk_operations: 0
   views_infinite_scroll: 0
   views_ui: 0
+  viewsreference: 0
   votingapi: 0
   menu_link_content: 1
   social_group: 2

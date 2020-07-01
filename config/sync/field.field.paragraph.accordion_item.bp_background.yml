@@ -1,0 +1,21 @@
+uuid: fb8012c5-e98d-4b58-b333-f96ac36bc68c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.bp_background
+    - paragraphs.paragraphs_type.accordion_item
+  module:
+    - options
+id: paragraph.accordion_item.bp_background
+field_name: bp_background
+entity_type: paragraph
+bundle: accordion_item
+label: Background
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,21 @@
+uuid: cdc91aea-d6fd-4139-bcb6-88db17e6b185
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.bp_width
+    - paragraphs.paragraphs_type.accordion_item
+  module:
+    - options
+id: paragraph.accordion_item.bp_width
+field_name: bp_width
+entity_type: paragraph
+bundle: accordion_item
+label: Width
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

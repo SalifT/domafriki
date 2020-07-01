@@ -3,8 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.block.bp_background
+    - field.field.paragraph.block.bp_width
     - field.field.paragraph.block.field_block_link
     - field.field.paragraph.block.field_block_reference
+    - field.field.paragraph.block.field_block_reference_primary_2
     - field.field.paragraph.block.field_block_reference_secondary
     - field.field.paragraph.block.field_block_title
     - paragraphs.paragraphs_type.block
@@ -18,8 +21,22 @@ targetEntityType: paragraph
 bundle: block
 mode: default
 content:
+  bp_background:
+    0: null
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  bp_width:
+    0: null
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_block_link:
-    weight: 3
+    weight: 6
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -27,23 +44,43 @@ content:
     type: link_default
     region: content
   field_block_reference:
-    weight: 1
+    weight: 3
     settings:
       plugin_id: ''
       settings: {  }
+      configuration_form: full
+    third_party_settings: {  }
+    type: block_field_default
+    region: content
+  field_block_reference_primary_2:
+    0:
+      weight: 2
+      settings:
+        plugin_id: ''
+        settings: {  }
+        configuration_form: full
+      third_party_settings: {  }
+      type: block_field_default
+      region: content
+    weight: 12
+    settings:
+      plugin_id: ''
+      settings: {  }
+      configuration_form: full
     third_party_settings: {  }
     type: block_field_default
     region: content
   field_block_reference_secondary:
-    weight: 2
+    weight: 5
     settings:
       plugin_id: ''
       settings: {  }
+      configuration_form: full
     third_party_settings: {  }
     type: block_field_default
     region: content
   field_block_title:
-    weight: 0
+    weight: 2
     settings:
       size: 60
       placeholder: ''

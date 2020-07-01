@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.featured.bp_background
+    - field.field.paragraph.featured.bp_width
     - field.field.paragraph.featured.field_featured_description
     - field.field.paragraph.featured.field_featured_items
     - field.field.paragraph.featured.field_featured_link
@@ -11,6 +13,7 @@ dependencies:
   module:
     - dynamic_entity_reference
     - link
+    - options
     - text
 _core:
   default_config_hash: Axry9YF_w0R_CaZFed-HUy_jF_UZeGMQ2VMesXMR0pc
@@ -19,15 +22,29 @@ targetEntityType: paragraph
 bundle: featured
 mode: default
 content:
-  field_featured_description:
+  bp_background:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  bp_width:
     weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_featured_description:
+    weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_featured_items:
-    weight: 2
+    weight: 4
     label: hidden
     settings:
       node:
@@ -93,11 +110,17 @@ content:
       vote_result:
         view_mode: default
         link: false
+      queue_storage_entity:
+        view_mode: default
+        link: false
+      path_alias:
+        view_mode: default
+        link: false
     third_party_settings: {  }
     type: dynamic_entity_reference_entity_view
     region: content
   field_featured_link:
-    weight: 3
+    weight: 5
     label: hidden
     settings:
       trim_length: 80
@@ -109,7 +132,7 @@ content:
     type: link
     region: content
   field_featured_title:
-    weight: 0
+    weight: 2
     label: hidden
     settings:
       link_to_entity: false

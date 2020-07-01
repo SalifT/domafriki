@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.accordion_item.bp_background
+    - field.field.paragraph.accordion_item.bp_width
     - field.field.paragraph.accordion_item.field_accord_item_description
     - field.field.paragraph.accordion_item.field_accord_item_title
     - paragraphs.paragraphs_type.accordion_item
@@ -15,6 +17,18 @@ targetEntityType: paragraph
 bundle: accordion_item
 mode: default
 content:
+  bp_background:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  bp_width:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_accord_item_description:
     weight: 1
     settings:
