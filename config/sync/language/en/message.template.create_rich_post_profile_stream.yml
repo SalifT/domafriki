@@ -1,0 +1,10 @@
+text:
+  -
+    value: "<p><a href=\"absolute]\">[message:author:display-name]</a> posted on your profile</p>\r\n"
+    format: full_html
+  -
+    value: "<p><a href=\"absolute]\">[message:author:display-name]</a> &gt; <a href=\"recipient-user-url]\">[activity:field_activity_recipient_user_display_name]</a></p>\r\n"
+    format: full_html
+  -
+    value: "<p><a href=\"absolute]\">[message:author:display-name]</a> posted on your <a href=\"recipient-user-url]\">profile</a></p>\r\n"
+    format: full_html

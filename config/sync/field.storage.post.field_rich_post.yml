@@ -1,0 +1,23 @@
+uuid: 3ec54f32-edbb-434b-8932-b57f6e6db1d7
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - paragraphs
+    - social_post
+_core:
+  default_config_hash: I3RWIznIXpuW-kRDrJspwBpvo5ME_k2CPpSMGoIv79U
+id: post.field_rich_post
+field_name: field_rich_post
+entity_type: post
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

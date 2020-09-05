@@ -1,0 +1,10 @@
+text:
+  -
+    value: "<p><a href=\"absolute]\">[message:author:display-name]</a> created [social_group:created_entity_link_html] in the <a href=\"gurl]\">[message:gtitle]</a> group</p>\r\n"
+    format: full_html
+  -
+    value: "<p><a href=\"absolute]\">[message:author:display-name]</a> created [social_group:created_entity_link_html] in the <a href=\"gurl]\">[message:gtitle]</a> group</p>\r\n"
+    format: full_html
+  -
+    value: "<p><a href=\"absolute]\">[message:author:display-name]</a> created [social_group:created_entity_link_html] in the <a href=\"gurl]\">[message:gtitle]</a> group</p>\r\n\r\n<p>[message:additional_information]</p>\r\n"
+    format: full_html

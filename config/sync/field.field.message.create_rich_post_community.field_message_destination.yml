@@ -1,0 +1,21 @@
+uuid: 5c4cfe0f-01a8-4f47-8618-0a1b084a6f0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.message.field_message_destination
+    - message.template.create_rich_post_community
+  module:
+    - options
+id: message.create_rich_post_community.field_message_destination
+field_name: field_message_destination
+entity_type: message
+bundle: create_rich_post_community
+label: field_message_destination
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

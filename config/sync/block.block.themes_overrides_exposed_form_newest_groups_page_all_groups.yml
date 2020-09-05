@@ -1,0 +1,31 @@
+uuid: 91ce7f1c-55c0-49a6-8ec6-03986b752d2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.newest_groups
+  module:
+    - system
+    - views
+  theme:
+    - themes_overrides
+_core:
+  default_config_hash: 2pIi1KbMaKhE051d8bsREZj0FQG1Hw0HYRY7T7w7uUw
+id: themes_overrides_exposed_form_newest_groups_page_all_groups
+theme: themes_overrides
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:newest_groups-page_all_groups'
+settings:
+  id: 'views_exposed_filter_block:newest_groups-page_all_groups'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: Filter
+visibility:
+  request_path:
+    id: request_path
+    pages: /all-groups
+    negate: false
+    context_mapping: {  }

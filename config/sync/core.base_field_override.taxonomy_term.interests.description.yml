@@ -1,0 +1,20 @@
+uuid: 6b57c2bc-f7bd-47b8-9f62-5df35427d3ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.interests
+  module:
+    - text
+id: taxonomy_term.interests.description
+field_name: description
+entity_type: taxonomy_term
+bundle: interests
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

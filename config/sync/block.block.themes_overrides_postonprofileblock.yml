@@ -1,0 +1,28 @@
+uuid: b232bc2f-1042-4479-ba01-2dc30d284c63
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_post
+    - system
+  theme:
+    - themes_overrides
+_core:
+  default_config_hash: Keolfk9f2yJvo-tVh71uqBoVc2jm2oCVvhvjHciUayA
+id: themes_overrides_postonprofileblock
+theme: themes_overrides
+region: sidebar_first
+weight: -9
+provider: null
+plugin: post_profile_block
+settings:
+  id: post_profile_block
+  label: 'Post on profile block'
+  provider: social_post
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*/stream'
+    negate: false
+    context_mapping: {  }

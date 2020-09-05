@@ -1,0 +1,28 @@
+uuid: 4f866ce4-59ac-485e-b5ac-9c4dbac3cd8d
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_post
+    - system
+  theme:
+    - themes_overrides
+_core:
+  default_config_hash: NYfgZobU2seVo1qPqOzGjLK-vS3C_QIe-wRzb60OeJk
+id: themes_overrides_postongroupblock
+theme: themes_overrides
+region: sidebar_first
+weight: -9
+provider: null
+plugin: post_group_block
+settings:
+  id: post_group_block
+  label: 'Post on group block'
+  provider: social_post
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '/group/*/stream'
+    negate: false
+    context_mapping: {  }

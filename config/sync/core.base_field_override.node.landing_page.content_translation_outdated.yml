@@ -1,0 +1,22 @@
+uuid: a5480868-9df2-4ee2-870e-75b22ccf55b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.landing_page
+id: node.landing_page.content_translation_outdated
+field_name: content_translation_outdated
+entity_type: node
+bundle: landing_page
+label: 'Translation outdated'
+description: 'A boolean indicating whether this translation needs to be updated.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

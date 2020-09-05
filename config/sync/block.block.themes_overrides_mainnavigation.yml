@@ -1,0 +1,27 @@
+uuid: d2cfd651-4d14-4ff2-a560-30e25720b83b
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - themes_overrides
+_core:
+  default_config_hash: G__z_1Sj0z-HowcyDBUlQ4Muwd89CXXhV-r3ZfqeZCA
+id: themes_overrides_mainnavigation
+theme: themes_overrides
+region: header
+weight: 4
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

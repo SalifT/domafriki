@@ -4,11 +4,14 @@ enabled_types:
     - comment
     - post_comment
   node:
-    - topic
     - event
+    - topic
   post:
-    - post
-_core:
-  default_config_hash: k7WfBSzzmG-nGCieW-Rh3Z5LQ0fVq8pre9uLqRIpxVI
+    0: post
+    1: rich_post
+    rich_post: rich_post
+    photo: photo
 hide_vote_widget: true
 delete_everywhere: false
+_core:
+  default_config_hash: TPfLxGqW6omnn94Ey-brK5LJ7MEHfUieoZdql3h-Vkc

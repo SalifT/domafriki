@@ -1,4 +1,4 @@
-uuid: 0c4a3aea-cb15-4ea9-9ae4-39c6ce3ca5a8
+uuid: f9760397-85ec-4d70-8252-30f830c18024
 langcode: en
 status: true
 dependencies:
@@ -37,5 +37,6 @@ content:
 hidden:
   entity_id: true
   field_grequest_message: true
+  langcode: true
   search_api_excerpt: true
   uid: true

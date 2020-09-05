@@ -1,0 +1,22 @@
+uuid: d8edb0a8-1fdb-448f-a416-54b4038e95b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.topic
+id: node.topic.content_translation_outdated
+field_name: content_translation_outdated
+entity_type: node
+bundle: topic
+label: 'Translation outdated'
+description: 'A boolean indicating whether this translation needs to be updated.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

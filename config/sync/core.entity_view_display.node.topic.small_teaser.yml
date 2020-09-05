@@ -1,4 +1,3 @@
-uuid: 658f6a39-27c0-42aa-a434-1d1427abe619
 langcode: en
 status: true
 dependencies:
@@ -15,8 +14,6 @@ dependencies:
   module:
     - image
     - user
-_core:
-  default_config_hash: fGZqV1ItKRkrty8-0zuOs7FOBUYHchXxZPJloPEZR0c
 id: node.topic.small_teaser
 targetEntityType: node
 bundle: topic
@@ -31,38 +28,6 @@ content:
       image_style: social_medium
       image_link: content
     third_party_settings: {  }
-  groups:
-    label: above
-    weight: -5
-    region: content
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-  groups_type_closed_group:
-    label: above
-    weight: -5
-    region: content
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-  groups_type_open_group:
-    label: above
-    weight: -5
-    region: content
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-  groups_type_public_group:
-    label: above
-    weight: -5
-    region: content
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
 hidden:
   body: true
   field_content_visibility: true
@@ -70,5 +35,6 @@ hidden:
   field_topic_comments: true
   field_topic_type: true
   flag_follow_content: true
+  like_and_dislike: true
   links: true
   search_api_excerpt: true

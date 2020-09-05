@@ -1,0 +1,20 @@
+uuid: 6e63c3c9-35d2-4451-838e-46eb5e625564
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.topic_types
+  module:
+    - text
+id: taxonomy_term.topic_types.description
+field_name: description
+entity_type: taxonomy_term
+bundle: topic_types
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

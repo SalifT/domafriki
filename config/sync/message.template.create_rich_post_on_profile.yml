@@ -1,0 +1,39 @@
+uuid: 5899af63-5453-4dce-8da6-826d5dacba65
+langcode: en
+status: true
+dependencies:
+  module:
+    - activity_logger
+third_party_settings:
+  activity_logger:
+    activity_bundle_entities:
+      post-rich_post: post-rich_post
+    activity_action: create_entitiy_action
+    activity_context: profile_activity_context
+    activity_destinations:
+      notifications: notifications
+      email: email
+    activity_create_direct: true
+    activity_aggregate: false
+    activity_entity_condition: ''
+_core:
+  default_config_hash: YQjrZ-AJ2_00Rt0bCzTEI4SNVLq55Oxq1M7uD_cmh_0
+template: create_rich_post_on_profile
+label: 'Create rich post on profile'
+description: 'A person created a rich post on my profile'
+text:
+  -
+    value: "<p><a href=\"absolute]\">[message:author:display-name]</a> posted on your profile</p>\r\n"
+    format: full_html
+  -
+    value: "<p><a href=\"absolute]\">[message:author:display-name]</a> posted on your profile</p>\r\n"
+    format: full_html
+  -
+    value: "<p><a href=\"absolute]\">[message:author:display-name]</a> posted on your <a href=\"recipient-user-url]\">profile</a></p>\r\n\r\n<p>[message:additional_information]</p>\r\n"
+    format: full_html
+settings:
+  'token options':
+    clear: false
+    'token replace': true
+  purge_override: false
+  purge_methods: {  }

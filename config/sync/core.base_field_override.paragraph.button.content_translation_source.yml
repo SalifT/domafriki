@@ -1,0 +1,20 @@
+uuid: f70840f2-877d-4f39-8180-cd4ca052158e
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.button
+id: paragraph.button.content_translation_source
+field_name: content_translation_source
+entity_type: paragraph
+bundle: button
+label: 'Translation source'
+description: 'The source language from which this translation was created.'
+required: false
+translatable: false
+default_value:
+  -
+    value: und
+default_value_callback: ''
+settings: {  }
+field_type: language

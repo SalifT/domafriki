@@ -1,0 +1,31 @@
+uuid: f0fce121-34b3-4a05-b38c-3157bbe4a758
+langcode: en
+status: true
+dependencies:
+  module:
+    - book
+    - node
+  theme:
+    - themes_overrides
+_core:
+  default_config_hash: VmWM44zjZhOdhge4MgqTs3AB6kJIuOex20wwnv5BpMo
+id: themes_overrides_booknavigation_2
+theme: themes_overrides
+region: sidebar_first
+weight: 0
+provider: null
+plugin: book_navigation
+settings:
+  id: book_navigation
+  label: 'Table of contents'
+  provider: book
+  label_display: visible
+  block_mode: 'book pages'
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      book: book
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

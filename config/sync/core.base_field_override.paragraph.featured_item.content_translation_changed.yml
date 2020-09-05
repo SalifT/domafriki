@@ -1,0 +1,18 @@
+uuid: 1ffbfd10-d183-4223-b12e-a97fb5e5451b
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.featured_item
+id: paragraph.featured_item.content_translation_changed
+field_name: content_translation_changed
+entity_type: paragraph
+bundle: featured_item
+label: 'Translation changed time'
+description: 'The Unix timestamp when the translation was most recently saved.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

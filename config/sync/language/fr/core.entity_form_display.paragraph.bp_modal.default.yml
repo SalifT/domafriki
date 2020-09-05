@@ -1,0 +1,9 @@
+content:
+  bp_modal_body:
+    settings:
+      title: Paragraphe
+      title_plural: Paragraphs
+  bp_modal_footer:
+    settings:
+      title: Paragraphe
+      title_plural: Paragraphs

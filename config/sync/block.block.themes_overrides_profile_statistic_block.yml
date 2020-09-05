@@ -1,0 +1,30 @@
+uuid: cbf57dd7-cd45-4c6c-865a-acbbe53b4f2b
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_profile
+    - system
+  theme:
+    - themes_overrides
+_core:
+  default_config_hash: 1-3wpbt9WAgh89uA-61n8vctdXV8ITMl5Q65Pig_MdY
+id: themes_overrides_profile_statistic_block
+theme: themes_overrides
+region: sidebar_first
+weight: -100
+provider: null
+plugin: profile_statistic_block
+settings:
+  id: profile_statistic_block
+  label: 'Profile statistic block'
+  provider: social_profile
+  label_display: '0'
+  context_mapping:
+    user: '@social_user.user_route_context:user'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/user\r\n/user/*/stream\r\n/user/*/events\r\n/user/*/topics\r\n/user/*/groups\r\n/user/*/information\r\n/user/*/discussions\r\n/user/*/ideas\r\n/user/*/challenges"
+    negate: false
+    context_mapping: {  }

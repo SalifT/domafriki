@@ -6,7 +6,14 @@ dependencies:
     - field.storage.node.field_page_image
     - node.type.page
   module:
+    - content_translation
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      file: file
+      alt: '0'
+      title: '0'
 _core:
   default_config_hash: qzstvdhQFyliKu4a4N_tlYXuPf5d-dhOyZ7WNje5bUM
 id: node.page.field_page_image
@@ -16,7 +23,7 @@ bundle: page
 label: Image
 description: 'Crop your image to select which part of your image to show on display.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

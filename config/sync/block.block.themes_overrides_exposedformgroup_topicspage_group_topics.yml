@@ -1,0 +1,31 @@
+uuid: 1226e9cd-0071-4a58-81aa-cdb249405534
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.group_topics
+  module:
+    - system
+    - views
+  theme:
+    - themes_overrides
+_core:
+  default_config_hash: awPVKI9tiREex_ehHn3hcHv4yrRbcFMnfHRPJQ1J_9Q
+id: themes_overrides_exposedformgroup_topicspage_group_topics
+theme: themes_overrides
+region: sidebar_first
+weight: -9
+provider: null
+plugin: 'views_exposed_filter_block:group_topics-page_group_topics'
+settings:
+  id: 'views_exposed_filter_block:group_topics-page_group_topics'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: Filter
+visibility:
+  request_path:
+    id: request_path
+    pages: '/group/*/topics'
+    negate: false
+    context_mapping: {  }

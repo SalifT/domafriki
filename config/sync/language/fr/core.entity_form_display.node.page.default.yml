@@ -1,0 +1,10 @@
+third_party_settings:
+  field_group:
+    group_page_content:
+      label: Contenu
+      format_settings:
+        label: Contenu
+    group_page_visibility:
+      label: Visibilité
+      format_settings:
+        label: Visibilité
