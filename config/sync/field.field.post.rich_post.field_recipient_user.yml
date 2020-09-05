@@ -1,0 +1,30 @@
+uuid: 7c8faaf1-c0b4-4eaa-8769-412d1974ac59
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.post.field_recipient_user
+    - social_post.post_type.rich_post
+_core:
+  default_config_hash: lKr_aECd39cmu7LRmaSM4hbWOMYStr4aiEpQqAK1R6A
+id: post.rich_post.field_recipient_user
+field_name: field_recipient_user
+entity_type: post
+bundle: rich_post
+label: 'Recipient (user)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: false
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

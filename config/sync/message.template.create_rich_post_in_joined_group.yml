@@ -1,0 +1,39 @@
+uuid: 1819c5fd-e739-4289-aab1-40acf5ed0a30
+langcode: en
+status: true
+dependencies:
+  module:
+    - activity_logger
+third_party_settings:
+  activity_logger:
+    activity_bundle_entities:
+      post-rich_post: post-rich_post
+    activity_action: create_entitiy_action
+    activity_context: content_in_my_group_activity_context
+    activity_destinations:
+      notifications: notifications
+      email: email
+    activity_create_direct: false
+    activity_aggregate: false
+    activity_entity_condition: ''
+_core:
+  default_config_hash: BQUEpQg2DH9mRkYcLDG0VfMPIeliwG9PCUbKyeFcilY
+template: create_rich_post_in_joined_group
+label: 'Create a rich post in a joined group'
+description: 'A person created a rich post in a group I joined'
+text:
+  -
+    value: "<p><a href=\"absolute]\">[message:author:display-name]</a> created [social_group:created_entity_link_html] in the <a href=\"gurl]\">[message:gtitle]</a> group</p>\r\n"
+    format: full_html
+  -
+    value: "<p><a href=\"absolute]\">[message:author:display-name]</a> created [social_group:created_entity_link_html] in the <a href=\"gurl]\">[message:gtitle]</a> group</p>\r\n"
+    format: full_html
+  -
+    value: "<p><a href=\"absolute]\">[message:author:display-name]</a> created [social_group:created_entity_link_html] in the <a href=\"gurl]\">[message:gtitle]</a> group</p>\r\n\r\n<p>[message:additional_information]</p>\r\n"
+    format: full_html
+settings:
+  'token options':
+    clear: false
+    'token replace': true
+  purge_override: false
+  purge_methods: {  }

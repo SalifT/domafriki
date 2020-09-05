@@ -1,0 +1,33 @@
+uuid: b9a47557-2707-406f-abf1-babdcd27794e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - shariff
+  theme:
+    - themes_overrides
+_core:
+  default_config_hash: rac2cs_uPQ6oRCo5L2DycJOsxqsU7E1IJk-Z8vMjo3Q
+id: themes_overrides_shariffsharebuttons
+theme: themes_overrides
+region: sidebar_first
+weight: 0
+provider: null
+plugin: shariff_block
+settings:
+  id: shariff_block
+  label: 'Share this page'
+  provider: shariff
+  label_display: visible
+  shariff_default_settings: 1
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      event: event
+      page: page
+      topic: topic
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

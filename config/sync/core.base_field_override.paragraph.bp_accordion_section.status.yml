@@ -1,0 +1,22 @@
+uuid: 826844bc-92ca-4c60-b6c3-34170c729fb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.bp_accordion_section
+id: paragraph.bp_accordion_section.status
+field_name: status
+entity_type: paragraph
+bundle: bp_accordion_section
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

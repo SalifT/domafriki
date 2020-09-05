@@ -1,0 +1,20 @@
+uuid: 52b2ed04-f4c8-4a22-b149-89b807ee7887
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.bp_accordion_section
+id: paragraph.bp_accordion_section.content_translation_source
+field_name: content_translation_source
+entity_type: paragraph
+bundle: bp_accordion_section
+label: 'Translation source'
+description: 'The source language from which this translation was created.'
+required: false
+translatable: false
+default_value:
+  -
+    value: und
+default_value_callback: ''
+settings: {  }
+field_type: language

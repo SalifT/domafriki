@@ -1,0 +1,20 @@
+uuid: 3d48bc06-4726-44c4-a850-e2fa904fe006
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_event
+  theme:
+    - themes_overrides
+id: themes_overrides_eventrequestsnotification_2
+theme: themes_overrides
+region: content
+weight: -29
+provider: null
+plugin: event_requests_notification
+settings:
+  id: event_requests_notification
+  label: 'Event requests notification'
+  provider: social_event
+  label_display: '0'
+visibility: {  }

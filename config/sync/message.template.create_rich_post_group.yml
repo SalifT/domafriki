@@ -1,0 +1,35 @@
+uuid: 36efaf20-5af9-424a-a810-52a65603171d
+langcode: en
+status: true
+dependencies:
+  module:
+    - activity_logger
+third_party_settings:
+  activity_logger:
+    activity_bundle_entities:
+      post-rich_post: post-rich_post
+    activity_action: create_entitiy_action
+    activity_context: group_activity_context
+    activity_destinations:
+      stream_home: stream_home
+      stream_group: stream_group
+      stream_profile: stream_profile
+      stream_explore: stream_explore
+    activity_create_direct: true
+    activity_aggregate: false
+    activity_entity_condition: ''
+_core:
+  default_config_hash: 7A9ZU9Em_AZcu-Ej8GzEsP7I20cklDMZBPBQOXn4y40
+template: create_rich_post_group
+label: 'Create rich post in a group'
+description: 'A user created a rich post in a group'
+text:
+  -
+    value: "<p><a href=\"absolute]\">[message:author:display-name]</a> posted in <a href=\"gurl]\">[message:gtitle]</a></p>\r\n"
+    format: full_html
+settings:
+  'token options':
+    clear: false
+    'token replace': true
+  purge_override: false
+  purge_methods: {  }

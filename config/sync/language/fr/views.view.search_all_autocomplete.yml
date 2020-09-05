@@ -1,0 +1,44 @@
+display:
+  default:
+    display_title: Maître
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Appliquer
+          reset_button_label: Réinitialiser
+          exposed_sorts_label: 'Trier par'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      fields:
+        type:
+          admin_label: 'Type de groupe'
+          separator: ', '
+        type_1:
+          admin_label: 'Type de nœud'
+          separator: ', '
+        uid_1:
+          alter:
+            text: Utilisateur
+          separator: ', '
+        nothing:
+          admin_label: 'Type d''entité'
+        title:
+          admin_label: 'Titre du nœud'
+          separator: ', '
+        label:
+          separator: ', '
+        name:
+          admin_label: 'Nom d''utilisateur'
+          separator: ', '
+        nid:
+          separator: ', '
+        uid:
+          separator: ', '
+        id:
+          separator: ', '
+      arguments:
+        search_api_fulltext:
+          exception:
+            title: Tout
+  rest_export_1:
+    display_title: 'Export REST'

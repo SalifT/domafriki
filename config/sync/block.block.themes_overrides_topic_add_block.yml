@@ -1,0 +1,28 @@
+uuid: d67b5784-6edd-4046-a1bf-7f4868a41896
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_topic
+    - system
+  theme:
+    - themes_overrides
+_core:
+  default_config_hash: eiC2CIa5Q7scScFEdXiTwbct8QT61s-7T-Uk8j0HYo4
+id: themes_overrides_topic_add_block
+theme: themes_overrides
+region: sidebar_first
+weight: -98
+provider: null
+plugin: topic_add_block
+settings:
+  id: topic_add_block
+  label: 'Topic add block'
+  provider: social_topic
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*/topics'
+    negate: false
+    context_mapping: {  }

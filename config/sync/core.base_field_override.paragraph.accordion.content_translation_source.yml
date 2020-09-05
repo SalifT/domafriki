@@ -1,0 +1,20 @@
+uuid: d06fd1db-a507-48ec-a26f-1fad4b08be54
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.accordion
+id: paragraph.accordion.content_translation_source
+field_name: content_translation_source
+entity_type: paragraph
+bundle: accordion
+label: 'Translation source'
+description: 'The source language from which this translation was created.'
+required: false
+translatable: false
+default_value:
+  -
+    value: und
+default_value_callback: ''
+settings: {  }
+field_type: language

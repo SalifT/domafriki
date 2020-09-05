@@ -1,0 +1,10 @@
+text:
+  -
+    value: "<p><a href=\"absolute]\">[message:author:display-name]</a> likes your [social_like:liked_entity_link_html]</p>\r\n"
+    format: full_html
+  -
+    value: "<p><a href=\"absolute]\">[message:author:display-name]</a> likes your [social_like:liked_entity_link_html]</p>\r\n"
+    format: full_html
+  -
+    value: "<p><a href=\"absolute]\">[message:author:display-name]</a> likes your [social_like:liked_entity_link_html]</p>\r\n"
+    format: full_html

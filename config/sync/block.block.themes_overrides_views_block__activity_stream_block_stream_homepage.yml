@@ -1,0 +1,33 @@
+uuid: 53a4b691-9229-4436-977e-26218e783310
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.activity_stream
+  module:
+    - system
+    - views
+  theme:
+    - themes_overrides
+_core:
+  default_config_hash: RymhcPR3B-3uuTJ92k7c0gWRYQVr6wZCa5q4AFJ0C5E
+id: themes_overrides_views_block__activity_stream_block_stream_homepage
+theme: themes_overrides
+region: content
+weight: -31
+provider: null
+plugin: 'views_block:activity_stream-block_stream_homepage'
+settings:
+  id: 'views_block:activity_stream-block_stream_homepage'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  type: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /stream
+    negate: false
+    context_mapping: {  }

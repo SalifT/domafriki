@@ -1,0 +1,10 @@
+text:
+  -
+    value: "<p><a href=\"absolute]\">[message:author:display-name]</a> commented on a post on your <a href=\"recipient-user-url]\">profile</a></p>\r\n"
+    format: full_html
+  -
+    value: "<p><a href=\"absolute]\">[message:author:display-name]</a> commented on a post on your <a href=\"recipient-user-url]\">profile</a></p>\r\n"
+    format: full_html
+  -
+    value: "<p><a href=\"absolute]\">[message:author:display-name]</a> commented on a post on your <a href=\"recipient-user-url]\">profile</a></p>\r\n\r\n<p><strong>[social_comment:comment_author]</strong> • [social_comment:comment_date]</p>\r\n\r\n<p>[social_comment:comment_text]</p>\r\n\r\n<p><a href=\"comment_reply_link_html]\">Reply to this comment </a></p>\r\n"
+    format: full_html

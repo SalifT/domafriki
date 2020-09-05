@@ -1,0 +1,8 @@
+uuid: 1bc91a3b-5aae-45ce-9081-79faa517ae92
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: oPevic-dpaCasoAkk3R9TNL7u7x1OAGj57lFnyKfNjw
+id: rich_post
+label: 'Rich Post'

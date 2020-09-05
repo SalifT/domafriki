@@ -1,0 +1,10 @@
+third_party_settings:
+  field_group:
+    group_location:
+      label: Emplacement
+    group_description:
+      label: Description
+    group_event_visibility:
+      label: Visibilité
+      format_settings:
+        label: Visibilité

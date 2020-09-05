@@ -1,0 +1,69 @@
+uuid: 0f77e154-5a1c-4e15-8b98-64e6dcf2859e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.post.group
+    - field.field.post.rich_post.field_post
+    - field.field.post.rich_post.field_post_comments
+    - field.field.post.rich_post.field_recipient_group
+    - field.field.post.rich_post.field_recipient_user
+    - field.field.post.rich_post.field_rich_post
+    - field.field.post.rich_post.field_visibility
+    - social_post.post_type.rich_post
+  module:
+    - dropdown
+    - paragraphs
+    - text
+_core:
+  default_config_hash: sjtc5RPjgqqtkpyU5Zz3xBoZiQHCmPrR5UR4LR6t41k
+id: post.rich_post.group
+targetEntityType: post
+bundle: rich_post
+mode: group
+content:
+  field_post:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: 'What''s on your mind?'
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_rich_post:
+    type: paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+    third_party_settings: {  }
+    region: content
+  field_visibility:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: dropdown_widget_type
+    region: content
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 3
+    region: content
+    third_party_settings: {  }
+hidden:
+  field_post_comments: true
+  field_recipient_group: true
+  field_recipient_user: true
+  langcode: true
+  user_id: true

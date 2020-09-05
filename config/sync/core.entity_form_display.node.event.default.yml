@@ -5,13 +5,16 @@ dependencies:
   config:
     - field.field.node.event.body
     - field.field.node.event.field_content_visibility
+    - field.field.node.event.field_enroll_method
     - field.field.node.event.field_event_address
     - field.field.node.event.field_event_comments
     - field.field.node.event.field_event_date
     - field.field.node.event.field_event_date_end
     - field.field.node.event.field_event_enroll
+    - field.field.node.event.field_event_enroll_outside_group
     - field.field.node.event.field_event_image
     - field.field.node.event.field_event_location
+    - field.field.node.event.field_event_managers
     - field.field.node.event.field_event_type
     - field.field.node.event.field_files
     - image.style.social_x_large
@@ -32,6 +35,9 @@ third_party_settings:
       children:
         - title
         - field_event_image
+        - field_event_type
+        - field_event_type
+        - field_event_type
         - field_event_type
         - field_event_type
       parent_name: ''
@@ -115,6 +121,7 @@ third_party_settings:
     group_enrollment:
       children:
         - field_event_enroll
+        - group_enrollment_methods
       parent_name: ''
       weight: 3
       label: 'Enrollment options'
@@ -125,6 +132,38 @@ third_party_settings:
         id: enrollment
         classes: card
       region: content
+    group_enrollment_methods:
+      children:
+        - field_enroll_method
+        - field_event_enroll_outside_group
+      format_settings:
+        attributes: ''
+        classes: enrollment-methods
+        effect: none
+        element: div
+        id: ''
+        label: 'Enrollment options fieldset'
+        label_element: h3
+        required_fields: false
+        show_label: false
+        speed: fast
+      format_type: html_element
+      label: 'Enrollment options fieldset'
+      parent_name: group_enrollment
+      region: hidden
+      weight: 20
+    group_event_managers:
+      children:
+        - field_event_managers
+      parent_name: ''
+      weight: 9
+      label: 'Event organisers'
+      format_type: fieldset
+      format_settings:
+        label: 'Event organisers'
+        id: event-managers
+        classes: card
+        required_fields: false
 _core:
   default_config_hash: Q96etTO0MCux6qGbqUd3feJnCmtYC1HDhCqeXL58ouA
 id: node.event.default
@@ -153,6 +192,12 @@ content:
     third_party_settings: {  }
     type: options_buttons
     region: content
+  field_enroll_method:
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    weight: 122
   field_event_address:
     weight: 14
     settings:
@@ -185,6 +230,13 @@ content:
     type: boolean_checkbox
     weight: 12
     third_party_settings: {  }
+  field_event_enroll_outside_group:
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    weight: 123
   field_event_image:
     weight: 3
     settings:
@@ -208,6 +260,16 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_event_managers:
+    settings:
+      match_operator: CONTAINS
+      placeholder: ''
+      size: 60
+      match_limit: 10
+    type: entity_reference_autocomplete
+    weight: 0
+    third_party_settings: {  }
+    region: content
   field_event_type:
     weight: 1
     settings: {  }
@@ -226,6 +288,13 @@ content:
     settings: {  }
     weight: 16
     region: content
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
     third_party_settings: {  }
   path:
     type: path
@@ -262,6 +331,11 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
+  translation:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 1
@@ -272,4 +346,6 @@ content:
       match_limit: 10
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  field_enroll_method: true
+  field_event_enroll_outside_group: true

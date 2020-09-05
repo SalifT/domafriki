@@ -1,0 +1,18 @@
+uuid: c4a761e3-4f3a-40ff-b290-3eab43b5069c
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.hero_small
+id: paragraph.hero_small.content_translation_changed
+field_name: content_translation_changed
+entity_type: paragraph
+bundle: hero_small
+label: 'Translation changed time'
+description: 'The Unix timestamp when the translation was most recently saved.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

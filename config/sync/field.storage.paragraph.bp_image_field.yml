@@ -13,7 +13,7 @@ field_name: bp_image_field
 entity_type: paragraph
 type: image
 settings:
-  uri_scheme: public
+  uri_scheme: private
   default_image:
     uuid: ''
     alt: ''

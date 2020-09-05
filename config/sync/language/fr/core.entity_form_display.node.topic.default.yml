@@ -1,0 +1,14 @@
+third_party_settings:
+  field_group:
+    group_topic_content:
+      label: Contenu
+      format_settings:
+        label: Contenu
+    group_topic_description:
+      label: Description
+      format_settings:
+        label: Description
+    group_topic_visibility:
+      label: Visibilité
+      format_settings:
+        label: Visibilité

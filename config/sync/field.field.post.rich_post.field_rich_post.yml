@@ -1,0 +1,106 @@
+uuid: 9bc7c0e6-4a9a-4530-bf81-01cd123ae0ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.post.field_rich_post
+    - social_post.post_type.rich_post
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: t_XX7I3_2l9BQ1C7unXcCTdWmVVUfhYuRx8cyzQJr-I
+id: post.rich_post.field_rich_post
+field_name: field_rich_post
+entity_type: post
+bundle: rich_post
+label: 'Rich Post'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles: null
+    target_bundles_drag_drop:
+      accordion:
+        weight: 27
+        enabled: false
+      accordion_item:
+        weight: 28
+        enabled: false
+      block:
+        weight: 29
+        enabled: false
+      bp_accordion:
+        weight: 30
+        enabled: false
+      bp_accordion_section:
+        weight: 31
+        enabled: false
+      bp_blank:
+        weight: 32
+        enabled: false
+      bp_block:
+        weight: 33
+        enabled: false
+      bp_carousel:
+        weight: 34
+        enabled: false
+      bp_column_wrapper:
+        weight: 35
+        enabled: false
+      bp_columns:
+        weight: 36
+        enabled: false
+      bp_columns_three_uneven:
+        weight: 37
+        enabled: false
+      bp_columns_two_uneven:
+        weight: 38
+        enabled: false
+      bp_image:
+        weight: 39
+        enabled: false
+      bp_modal:
+        weight: 40
+        enabled: false
+      bp_simple:
+        weight: 41
+        enabled: false
+      bp_tab_section:
+        weight: 42
+        enabled: false
+      bp_tabs:
+        weight: 43
+        enabled: false
+      bp_view:
+        weight: 44
+        enabled: false
+      button:
+        weight: 45
+        enabled: false
+      featured:
+        weight: 46
+        enabled: false
+      featured_item:
+        weight: 47
+        enabled: false
+      featured_items:
+        weight: 48
+        enabled: false
+      hero:
+        weight: 49
+        enabled: false
+      hero_small:
+        weight: 50
+        enabled: false
+      introduction:
+        weight: 51
+        enabled: false
+      section:
+        weight: 52
+        enabled: false
+field_type: entity_reference_revisions

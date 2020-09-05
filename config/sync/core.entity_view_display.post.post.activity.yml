@@ -44,6 +44,11 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  like_and_dislike:
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
 hidden:
   field_recipient_group: true
   field_recipient_user: true

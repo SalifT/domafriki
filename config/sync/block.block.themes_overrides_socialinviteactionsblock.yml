@@ -1,0 +1,28 @@
+uuid: 371372f9-ec5b-4dc2-a5bf-21360aa20b2c
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_group_invite
+    - system
+  theme:
+    - themes_overrides
+_core:
+  default_config_hash: gfd9e_J6-ndbvgcg7dMovWH48LaEcnJqO8m7W-AiU_w
+id: themes_overrides_socialinviteactionsblock
+theme: themes_overrides
+region: sidebar_first
+weight: 0
+provider: null
+plugin: social_invite_actions_block
+settings:
+  id: social_invite_actions_block
+  label: 'Social Invite Actions block'
+  provider: social_group_invite
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '/group/*/membership'
+    negate: false
+    context_mapping: {  }
