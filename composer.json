@@ -16,7 +16,8 @@
         "drupal/console": "~1.0",
         "drupal/console-dotenv": "^0.3.1",
         "drush/drush": "^10.2",
-        "drupal/config_installer": "^1.8"
+        "drupal/config_installer": "^1.8",
+        "drupal/h5p": "^1.0@RC"
     },
     "repositories": [
         {

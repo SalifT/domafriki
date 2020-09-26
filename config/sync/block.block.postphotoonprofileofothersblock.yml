@@ -1,0 +1,26 @@
+uuid: b7a18ef6-e7b3-4ab9-9f26-7e968508373e
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_post_photo
+    - system
+  theme:
+    - socialblue
+id: postphotoonprofileofothersblock
+theme: socialblue
+region: content
+weight: 0
+provider: null
+plugin: post_photo_profile_block
+settings:
+  id: post_photo_profile_block
+  label: 'Post photo on profile of others block'
+  provider: social_post_photo
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*/stream'
+    negate: false
+    context_mapping: {  }

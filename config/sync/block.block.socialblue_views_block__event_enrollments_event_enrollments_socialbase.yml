@@ -25,6 +25,7 @@ settings:
   label_display: visible
   views_label: ''
   items_per_page: none
+  type: none
 visibility:
   node_type:
     id: node_type
@@ -35,6 +36,6 @@ visibility:
       node: '@node.node_route_context:node'
   request_path:
     id: request_path
-    pages: "/node/*/edit\r\n/node/*/delete"
+    pages: "/node/*/edit\r\n/node/*/delete\r\n*/all-enrollment-requests/confirm-decline/*\r\n*/invite/email\r\n*/invite/user\r\n*/invite/confirm\r\n*/all-enrollment-requests/confirm-decline/*\r\n*/invite/email\r\n*/invite/user\r\n*/invite/confirm\r\n*/all-enrollment-requests/confirm-decline/*\r\n*/invite/email\r\n*/invite/user\r\n*/invite/confirm\r\n*/all-enrollment-requests/confirm-decline/*\r\n*/invite/email\r\n*/invite/user\r\n*/invite/confirm\r\n*/all-enrollment-requests/confirm-decline/*\r\n*/invite/email\r\n*/invite/user\r\n*/invite/confirm\r\n*/all-enrollment-requests/confirm-decline/*\r\n*/invite/email\r\n*/invite/user\r\n*/invite/confirm"
     negate: true
     context_mapping: {  }

@@ -1,24 +1,22 @@
-uuid: 47767435-1ee9-4c64-afe4-97c716ce1bba
+uuid: b75bf817-8428-4787-b983-cb5e4e06bdba
 langcode: en
 status: true
 dependencies:
   module:
-    - social_post
+    - rich_post
     - system
   theme:
     - socialblue
-_core:
-  default_config_hash: THj7ZZhBJZBZcOYZCN5a2t0IzBvF1cQgKEnXrkyn23I
-id: socialblue_postblock
+id: richpostmodalblock
 theme: socialblue
-region: hidden
-weight: -7
+region: content
+weight: -23
 provider: null
-plugin: post_block
+plugin: rich_post_modal_block
 settings:
-  id: post_block
-  label: 'Post block'
-  provider: social_post
+  id: rich_post_modal_block
+  label: 'Rich post modal block'
+  provider: rich_post
   label_display: '0'
 visibility:
   request_path:

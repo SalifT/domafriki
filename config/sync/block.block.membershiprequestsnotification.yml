@@ -16,7 +16,7 @@ _core:
 id: membershiprequestsnotification
 theme: socialblue
 region: content
-weight: -100
+weight: -31
 provider: null
 plugin: membership_requests_notification
 settings:
@@ -36,6 +36,7 @@ visibility:
       closed_group: closed_group
       open_group: open_group
       public_group: public_group
+      flexible_group: flexible_group
     negate: false
     context_mapping:
       group: '@group.group_route_context:group'
