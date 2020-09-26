@@ -4,13 +4,17 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.post.activity_comment
+    - field.field.post.post.field_interactive_content_h5p
     - field.field.post.post.field_post
     - field.field.post.post.field_post_comments
     - field.field.post.post.field_recipient_group
     - field.field.post.post.field_recipient_user
+    - field.field.post.post.field_rich_post
     - field.field.post.post.field_visibility
     - social_post.post_type.post
   module:
+    - entity_reference_revisions
+    - h5p
     - text
     - user
 _core:
@@ -20,6 +24,13 @@ targetEntityType: post
 bundle: post
 mode: activity_comment
 content:
+  field_interactive_content_h5p:
+    type: h5p_default
+    weight: 3
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
   field_post:
     type: text_default
     weight: 1
@@ -27,6 +38,20 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_rich_post:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  like_and_dislike:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   user_id:
     label: hidden
     type: author
@@ -34,11 +59,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  like_and_dislike:
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-    weight: 2
 hidden:
   field_post_comments: true
   field_recipient_group: true

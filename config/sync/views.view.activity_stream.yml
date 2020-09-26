@@ -347,10 +347,22 @@ display:
       defaults:
         filters: false
         filter_groups: false
+        header: false
       filter_groups:
         operator: AND
         groups:
           1: AND
+      header:
+        post_form:
+          id: post_form
+          table: views
+          field: post_form
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          block_id: post_block
+          plugin_id: social_post_post_form
     cache_metadata:
       max-age: -1
       contexts:

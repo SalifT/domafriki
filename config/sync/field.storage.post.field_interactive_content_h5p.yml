@@ -1,0 +1,19 @@
+uuid: f4f10048-f56a-4c97-bb20-9a5bbb2f2eea
+langcode: en
+status: true
+dependencies:
+  module:
+    - h5p
+    - social_post
+id: post.field_interactive_content_h5p
+field_name: field_interactive_content_h5p
+entity_type: post
+type: h5p
+settings: {  }
+module: h5p
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
