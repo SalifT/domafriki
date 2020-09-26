@@ -1,24 +1,22 @@
-uuid: 47767435-1ee9-4c64-afe4-97c716ce1bba
+uuid: abdaeb35-1001-4cb1-8680-95246f7adb5d
 langcode: en
 status: true
 dependencies:
   module:
-    - social_post
+    - social_post_photo
     - system
   theme:
     - socialblue
-_core:
-  default_config_hash: THj7ZZhBJZBZcOYZCN5a2t0IzBvF1cQgKEnXrkyn23I
-id: socialblue_postblock
+id: postphotoblock
 theme: socialblue
-region: hidden
-weight: -7
+region: content
+weight: 0
 provider: null
-plugin: post_block
+plugin: post_photo_block
 settings:
-  id: post_block
-  label: 'Post block'
-  provider: social_post
+  id: post_photo_block
+  label: 'Post photo block'
+  provider: social_post_photo
   label_display: '0'
 visibility:
   request_path:

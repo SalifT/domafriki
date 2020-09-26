@@ -1,0 +1,26 @@
+uuid: 7c1da13d-be1e-4803-bbb4-67509ee036e0
+langcode: en
+status: true
+dependencies:
+  module:
+    - rich_post
+    - system
+  theme:
+    - socialblue
+id: richpostongroupmodalblock
+theme: socialblue
+region: content
+weight: -22
+provider: null
+plugin: rich_post_group_modal_block
+settings:
+  id: rich_post_group_modal_block
+  label: 'Rich post on group modal block'
+  provider: rich_post
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '/group/*/stream'
+    negate: false
+    context_mapping: {  }

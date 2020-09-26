@@ -6,6 +6,7 @@ dependencies:
     - views.view.managers
   module:
     - node
+    - system
     - views
   theme:
     - socialblue
@@ -33,3 +34,8 @@ visibility:
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: "*/all-enrollment-requests/confirm-decline/*\r\n*/invite/email\r\n*/invite/user\r\n*/invite/confirm\r\n*/all-enrollment-requests/confirm-decline/*\r\n*/invite/email\r\n*/invite/user\r\n*/invite/confirm\r\n*/all-enrollment-requests/confirm-decline/*\r\n*/invite/email\r\n*/invite/user\r\n*/invite/confirm\r\n*/all-enrollment-requests/confirm-decline/*\r\n*/invite/email\r\n*/invite/user\r\n*/invite/confirm\r\n*/all-enrollment-requests/confirm-decline/*\r\n*/invite/email\r\n*/invite/user\r\n*/invite/confirm"
