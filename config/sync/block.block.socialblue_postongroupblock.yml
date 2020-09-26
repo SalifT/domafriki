@@ -12,7 +12,7 @@ _core:
 id: socialblue_postongroupblock
 theme: socialblue
 region: hidden
-weight: -9
+weight: -33
 provider: null
 plugin: post_group_block
 settings:

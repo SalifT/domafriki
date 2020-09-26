@@ -9,8 +9,8 @@ dependencies:
     - socialblue
 id: richpostmodalblock
 theme: socialblue
-region: content
-weight: -23
+region: hidden
+weight: -28
 provider: null
 plugin: rich_post_modal_block
 settings:

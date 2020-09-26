@@ -9,8 +9,8 @@ dependencies:
     - socialblue
 id: richpostonprofilemodalblock
 theme: socialblue
-region: content
-weight: -21
+region: hidden
+weight: -26
 provider: null
 plugin: rich_post_profile_modal_block
 settings:

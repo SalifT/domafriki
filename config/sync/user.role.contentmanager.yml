@@ -17,6 +17,7 @@ permissions:
   - 'access group overview'
   - 'access group search'
   - 'access mentions'
+  - 'access own h5p results'
   - 'access site reports'
   - 'access toolbar'
   - 'access user profiles'
