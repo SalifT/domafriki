@@ -17,7 +17,8 @@
         "drupal/console-dotenv": "^0.3.1",
         "drush/drush": "^10.2",
         "drupal/config_installer": "^1.8",
-        "drupal/h5p": "^1.0@RC"
+        "drupal/h5p": "^1.0@RC",
+        "drupal/ckeditor_emojione": "^1.3"
     },
     "repositories": [
         {
@@ -70,7 +71,10 @@
         "enable-patching": true,
         "patches": {
             "drupal/entity_reference_revisions": {
-              "Manual cleanup process for obsolete composite entities": "https://www.drupal.org/files/issues/2019-09-19/manual_cleanup_obsolote_composites-3016388-63.patch"
+                "Manual cleanup process for obsolete composite entities": "https://www.drupal.org/files/issues/2019-09-19/manual_cleanup_obsolote_composites-3016388-63.patch"
+            },
+            "drupal/social_post": {
+                "Fix for supporting post form in modal: Call to a member function on string": "https://www.drupal.org/files/issues/2020-10-03/getdisplayname-on-string-3174630-2.patch"
             }
         }
     },
