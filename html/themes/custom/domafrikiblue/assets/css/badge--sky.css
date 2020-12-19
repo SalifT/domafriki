@@ -1,0 +1,17 @@
+.domafrikiblue--sky .badge {
+  font-size: 12px;
+}
+
+.domafrikiblue--sky .badge.teaser__badge.badge-default, .domafrikiblue--sky .badge.teaser__badge.badge-primary, .domafrikiblue--sky .badge.teaser__badge.badge-secondary, .domafrikiblue--sky .badge.teaser__badge.badge-accent, .domafrikiblue--sky .badge.teaser__badge.badge-success, .domafrikiblue--sky .badge.teaser__badge.badge-info, .domafrikiblue--sky .badge.teaser__badge.badge-warning, .domafrikiblue--sky .badge.teaser__badge.badge-danger, .domafrikiblue--sky .badge.teaser__badge.badge-active {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+@media (min-width: 900px) {
+  .domafrikiblue--sky .badge-status {
+    margin-left: .5rem;
+    padding: 5px .875rem;
+    font-size: .875rem;
+    font-weight: 300;
+  }
+}
