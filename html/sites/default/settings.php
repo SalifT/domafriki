@@ -520,7 +520,7 @@ if ($settings['hash_salt']) {
  * See https://www.drupal.org/documentation/modules/file for more information
  * about securing private files.
  */
-$settings['file_private_path'] = '../private';
+$settings['file_private_path'] = $app_root . '/../private';
 
 /**
  * Temporary file path:
@@ -701,6 +701,12 @@ $settings['file_private_path'] = '../private';
  * will allow the site to run off of all variants of example.com and
  * example.org, with all subdomains included.
  */
+/* $settings['trusted_host_patterns'] = array(
+  '^localhost$',
+  '^.+\localhost$',
+  '^127\.0\.0\.1$',
+  '^.+\127\.0\.0\.1$',
+); */
 
 /**
  * The default list of directories that will be ignored by Drupal's file API.

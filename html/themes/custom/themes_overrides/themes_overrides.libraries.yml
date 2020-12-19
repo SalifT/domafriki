@@ -1,0 +1,12 @@
+global-styling:
+   css:
+    theme:
+      assets/css/override-styles.css : {}
+   js:
+     #js/your_js.js : {}
+admin-toolbar:
+   css:
+    component:
+      assets/css/admin-toolbar.css : {}
+   js:
+     #js/your_js.js : {}

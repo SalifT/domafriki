@@ -1,0 +1,9 @@
+.toolbar-fixed .main-container,
+.toolbar-vertical .main-container {
+  padding-top: 0;
+}
+
+.toolbar-vertical .navbar-default,
+.toolbar-fixed .navbar-default {
+  position: relative;
+}

@@ -1,0 +1,9 @@
+.domafrikiblue--sky .site-footer {
+  padding: 25px 0;
+}
+
+@media (min-width: 900px) {
+  .domafrikiblue--sky .site-footer {
+    padding: 45px 0;
+  }
+}

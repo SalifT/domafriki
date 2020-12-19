@@ -1,0 +1,16 @@
+name: Themes overrides
+type: theme
+description: 'Overrides themes libraries.'
+package: Custom
+core: 8.x
+
+base theme: socialbase
+
+#extend socialbase.admin-toolbar
+libraries-extend:
+  socialbase/admin-toolbar:
+    - themes_overrides/admin-toolbar
+
+libraries:
+  - themes_overrides/global-styling
+  - themes_overrides/admin-toolbar
