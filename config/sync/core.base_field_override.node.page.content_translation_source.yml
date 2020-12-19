@@ -1,0 +1,20 @@
+uuid: ae1bb5ee-be81-47c7-9166-4f0d86b969af
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.page
+id: node.page.content_translation_source
+field_name: content_translation_source
+entity_type: node
+bundle: page
+label: 'Translation source'
+description: 'The source language from which this translation was created.'
+required: false
+translatable: false
+default_value:
+  -
+    value: und
+default_value_callback: ''
+settings: {  }
+field_type: language

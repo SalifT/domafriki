@@ -1,0 +1,52 @@
+display:
+  default:
+    display_title: Maître
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Appliquer
+          reset_button_label: Réinitialiser
+          text_input_required: 'Sélectionnez n''importe quel filtre et cliquez sur Appliquer pour voir les résultats'
+          bef:
+            general:
+              secondary_label: 'Options avancées'
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Éléments par page'
+            items_per_page_options_all_label: '- Tout -'
+            offset_label: Décalage
+          tags:
+            previous: '‹ Précédent'
+            next: 'Suivant ›'
+            first: '« Premier'
+            last: 'Dernier »'
+      filters:
+        type:
+          expose:
+            label: 'Type de contenu'
+        field_event_date:
+          group_info:
+            group_items:
+              2:
+                title: Avant
+              3:
+                title: Après
+      sorts:
+        search_api_relevance:
+          expose:
+            label: Pertinence
+        title:
+          expose:
+            label: Titre
+      title: 'Rechercher dans le contenu'
+      arguments:
+        search_api_fulltext:
+          exception:
+            title: Tout
+  page:
+    display_title: Page
+  page_no_value:
+    display_options:
+      menu:
+        title: Contenu

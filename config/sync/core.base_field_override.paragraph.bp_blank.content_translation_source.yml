@@ -1,0 +1,20 @@
+uuid: 60500a66-0dee-4113-b708-71347bd7ff6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.bp_blank
+id: paragraph.bp_blank.content_translation_source
+field_name: content_translation_source
+entity_type: paragraph
+bundle: bp_blank
+label: 'Translation source'
+description: 'The source language from which this translation was created.'
+required: false
+translatable: false
+default_value:
+  -
+    value: und
+default_value_callback: ''
+settings: {  }
+field_type: language

@@ -251,9 +251,10 @@ display:
         - 'languages:language_interface'
         - url.query_args
       tags:
-        - 'config:core.entity_view_display.activity.activity.default'
+        - 'config:core.entity_view_display.activity.activity.featured'
         - 'config:core.entity_view_display.activity.activity.notification'
         - 'config:core.entity_view_display.activity.activity.notification_archive'
+        - 'config:core.entity_view_display.activity.activity.default'
   block_stream_homepage:
     display_plugin: block
     id: block_stream_homepage
@@ -346,10 +347,22 @@ display:
       defaults:
         filters: false
         filter_groups: false
+        header: false
       filter_groups:
         operator: AND
         groups:
           1: AND
+      header:
+        post_form:
+          id: post_form
+          table: views
+          field: post_form
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          block_id: post_block
+          plugin_id: social_post_post_form
     cache_metadata:
       max-age: -1
       contexts:
@@ -358,6 +371,7 @@ display:
         - user
       tags:
         - 'config:core.entity_view_display.activity.activity.default'
+        - 'config:core.entity_view_display.activity.activity.featured'
         - 'config:core.entity_view_display.activity.activity.notification'
         - 'config:core.entity_view_display.activity.activity.notification_archive'
   block_stream_homepage_without_post:
@@ -466,6 +480,7 @@ display:
         - user
       tags:
         - 'config:core.entity_view_display.activity.activity.default'
+        - 'config:core.entity_view_display.activity.activity.featured'
         - 'config:core.entity_view_display.activity.activity.notification'
         - 'config:core.entity_view_display.activity.activity.notification_archive'
   page_activity_stream:
@@ -489,6 +504,7 @@ display:
         - url.query_args
       tags:
         - 'config:core.entity_view_display.activity.activity.default'
+        - 'config:core.entity_view_display.activity.activity.featured'
         - 'config:core.entity_view_display.activity.activity.notification'
         - 'config:core.entity_view_display.activity.activity.notification_archive'
   page_explore:
@@ -612,5 +628,6 @@ display:
         - url.query_args
       tags:
         - 'config:core.entity_view_display.activity.activity.default'
+        - 'config:core.entity_view_display.activity.activity.featured'
         - 'config:core.entity_view_display.activity.activity.notification'
         - 'config:core.entity_view_display.activity.activity.notification_archive'

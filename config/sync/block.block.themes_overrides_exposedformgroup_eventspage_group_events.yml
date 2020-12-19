@@ -1,0 +1,31 @@
+uuid: 19dfde67-0460-430f-9c70-0650f4646152
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.group_events
+  module:
+    - system
+    - views
+  theme:
+    - themes_overrides
+_core:
+  default_config_hash: kMyq_C7u_4IGEVq6D7EJdS_FZvB8Ed37MdJ7x8e900Y
+id: themes_overrides_exposedformgroup_eventspage_group_events
+theme: themes_overrides
+region: sidebar_first
+weight: -9
+provider: null
+plugin: 'views_exposed_filter_block:group_events-page_group_events'
+settings:
+  id: 'views_exposed_filter_block:group_events-page_group_events'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: Filter
+visibility:
+  request_path:
+    id: request_path
+    pages: '/group/*/events'
+    negate: false
+    context_mapping: {  }

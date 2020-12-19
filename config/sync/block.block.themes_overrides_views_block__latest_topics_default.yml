@@ -1,0 +1,33 @@
+uuid: 64bf65cd-1ca9-4774-9e68-b8e52f66f3db
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.latest_topics
+  module:
+    - system
+    - views
+  theme:
+    - themes_overrides
+_core:
+  default_config_hash: L0GbzYBp0tvEdRSIZ6uozmaIHK2-g1XxryF-kxttjTQ
+id: themes_overrides_views_block__latest_topics_default
+theme: themes_overrides
+region: sidebar_first
+weight: 3
+provider: null
+plugin: 'views_block:latest_topics-block_latest_topics'
+settings:
+  id: 'views_block:latest_topics-block_latest_topics'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  type: none
+visibility:
+  request_path:
+    id: request_path
+    pages: "/stream\r\n/explore"
+    negate: false
+    context_mapping: {  }

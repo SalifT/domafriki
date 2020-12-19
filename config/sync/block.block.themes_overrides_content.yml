@@ -1,0 +1,22 @@
+uuid: 9a40be79-28bb-4249-a85a-a2e5b854cf4e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - themes_overrides
+_core:
+  default_config_hash: WQavb4yx5tp3JXnHNNH_B1-tp7ADTvyM3LDxGEuWbMw
+id: themes_overrides_content
+theme: themes_overrides
+region: content
+weight: -13
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

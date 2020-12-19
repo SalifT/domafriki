@@ -1,0 +1,23 @@
+uuid: 3277768d-afcb-4fff-963f-698455b733e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.post.field_interactive_content_h5p
+    - social_post.post_type.post
+  module:
+    - h5p
+id: post.post.field_interactive_content_h5p
+field_name: field_interactive_content_h5p
+entity_type: post
+bundle: post
+label: 'Interactive content h5p'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    h5p_content_id: null
+default_value_callback: ''
+settings: {  }
+field_type: h5p

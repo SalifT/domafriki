@@ -1,0 +1,26 @@
+uuid: ce043e2a-849b-4a33-8617-524ab2a203a0
+langcode: en
+status: true
+dependencies:
+  module:
+    - rich_post
+    - system
+  theme:
+    - socialblue
+id: richpostonprofilemodalblock
+theme: socialblue
+region: hidden
+weight: -26
+provider: null
+plugin: rich_post_profile_modal_block
+settings:
+  id: rich_post_profile_modal_block
+  label: 'Rich post on profile modal block'
+  provider: rich_post
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*/stream'
+    negate: false
+    context_mapping: {  }

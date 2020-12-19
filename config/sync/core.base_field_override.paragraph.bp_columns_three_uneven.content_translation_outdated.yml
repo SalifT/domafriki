@@ -1,0 +1,22 @@
+uuid: e6cc0372-783b-47a3-82bf-83d18f2c4d15
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.bp_columns_three_uneven
+id: paragraph.bp_columns_three_uneven.content_translation_outdated
+field_name: content_translation_outdated
+entity_type: paragraph
+bundle: bp_columns_three_uneven
+label: 'Translation outdated'
+description: 'A boolean indicating whether this translation needs to be updated.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

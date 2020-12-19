@@ -1,0 +1,33 @@
+uuid: 686ba3c4-70db-49c2-98e9-ecd4307f5f46
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.newest_groups
+  module:
+    - system
+    - views
+  theme:
+    - themes_overrides
+_core:
+  default_config_hash: avPLiTLdMEzNvHjIKjuVC9TDVUmKBUwRCUn-ZomoGTo
+id: themes_overrides_views_block__newest_groups_block_newest_groups
+theme: themes_overrides
+region: sidebar_first
+weight: 4
+provider: null
+plugin: 'views_block:newest_groups-block_newest_groups'
+settings:
+  id: 'views_block:newest_groups-block_newest_groups'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  type: none
+visibility:
+  request_path:
+    id: request_path
+    pages: "/stream\r\n/explore"
+    negate: false
+    context_mapping: {  }

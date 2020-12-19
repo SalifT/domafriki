@@ -6,7 +6,14 @@ dependencies:
     - field.storage.node.field_event_image
     - node.type.event
   module:
+    - content_translation
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      file: file
+      alt: '0'
+      title: '0'
 _core:
   default_config_hash: Me4_laexdcrUwu1sfbQN5iE67zU0R5YjXtbbt_M_WUU
 id: node.event.field_event_image

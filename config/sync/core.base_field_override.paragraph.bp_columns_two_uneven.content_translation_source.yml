@@ -1,0 +1,20 @@
+uuid: 1c4849fd-0c6f-44af-98ee-a15062e78d1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.bp_columns_two_uneven
+id: paragraph.bp_columns_two_uneven.content_translation_source
+field_name: content_translation_source
+entity_type: paragraph
+bundle: bp_columns_two_uneven
+label: 'Translation source'
+description: 'The source language from which this translation was created.'
+required: false
+translatable: false
+default_value:
+  -
+    value: und
+default_value_callback: ''
+settings: {  }
+field_type: language

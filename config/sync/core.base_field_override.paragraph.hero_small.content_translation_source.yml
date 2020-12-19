@@ -1,0 +1,20 @@
+uuid: e28dc23d-ab42-487c-8913-bb7af582110e
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.hero_small
+id: paragraph.hero_small.content_translation_source
+field_name: content_translation_source
+entity_type: paragraph
+bundle: hero_small
+label: 'Translation source'
+description: 'The source language from which this translation was created.'
+required: false
+translatable: false
+default_value:
+  -
+    value: und
+default_value_callback: ''
+settings: {  }
+field_type: language

@@ -1,0 +1,18 @@
+uuid: 7ac66a89-9b68-45d2-a5d9-ee4531454cec
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.bp_columns_two_uneven
+id: paragraph.bp_columns_two_uneven.content_translation_changed
+field_name: content_translation_changed
+entity_type: paragraph
+bundle: bp_columns_two_uneven
+label: 'Translation changed time'
+description: 'The Unix timestamp when the translation was most recently saved.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

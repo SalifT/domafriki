@@ -1,0 +1,39 @@
+uuid: 1806c91b-74fb-48d3-84f5-ec309a89613e
+langcode: en
+status: true
+dependencies:
+  module:
+    - activity_logger
+third_party_settings:
+  activity_logger:
+    activity_bundle_entities:
+      comment-post_comment: comment-post_comment
+    activity_action: create_entitiy_action
+    activity_context: profile_activity_context
+    activity_destinations:
+      notifications: notifications
+      email: email
+    activity_create_direct: false
+    activity_aggregate: false
+    activity_entity_condition: comment_not_reply
+_core:
+  default_config_hash: FoYZ2LXeL5r4EkcCfp6N0uXCkVEY6IHhSJyX3BsPzSs
+template: create_comment_rich_post_profile
+label: 'Create comment on rich post on my profile'
+description: 'A person commented on a rich post on my profile'
+text:
+  -
+    value: "<p><a href=\"absolute]\">[message:author:display-name]</a> commented on a post on your <a href=\"recipient-user-url]\">profile</a></p>\r\n"
+    format: full_html
+  -
+    value: "<p><a href=\"absolute]\">[message:author:display-name]</a> commented on a post on your <a href=\"recipient-user-url]\">profile</a></p>\r\n"
+    format: full_html
+  -
+    value: "<p><a href=\"absolute]\">[message:author:display-name]</a> commented on a post on your <a href=\"recipient-user-url]\">profile</a></p>\r\n\r\n<p><strong>[social_comment:comment_author]</strong> • [social_comment:comment_date]</p>\r\n\r\n<p>[social_comment:comment_text]</p>\r\n\r\n<p><a href=\"comment_reply_link_html]\">Reply to this comment </a></p>\r\n"
+    format: full_html
+settings:
+  'token options':
+    clear: false
+    'token replace': true
+  purge_override: false
+  purge_methods: {  }

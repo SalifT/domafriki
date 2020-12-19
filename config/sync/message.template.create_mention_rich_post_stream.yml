@@ -1,0 +1,32 @@
+uuid: 51127c23-12cc-40c2-a527-ca9990022dab
+langcode: en
+status: true
+dependencies:
+  module:
+    - activity_logger
+third_party_settings:
+  activity_logger:
+    activity_bundle_entities:
+      mentions-mentions: mentions-mentions
+    activity_action: create_entitiy_action
+    activity_context: mention_activity_context
+    activity_destinations:
+      stream_profile: stream_profile
+    activity_create_direct: true
+    activity_aggregate: false
+    activity_entity_condition: mention_post
+_core:
+  default_config_hash: G6z9itW1W3TcEXNlN0LRcYoIRgfj-vM4h8piy060OWg
+template: create_mention_rich_post_stream
+label: 'Create mention in a rich post (stream: profile)'
+description: 'A person mentioned me in a rich post (stream: profile)'
+text:
+  -
+    value: "<p><a href=\"\">[message:author:display-name]</a> mentioned <a href=\"\">[social_mentions:mentioned_user]</a> in a post</p>\r\n"
+    format: basic_html
+settings:
+  'token options':
+    clear: false
+    'token replace': true
+  purge_override: false
+  purge_methods: {  }

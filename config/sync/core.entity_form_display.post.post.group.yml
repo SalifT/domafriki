@@ -4,14 +4,19 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.post.group
+    - field.field.post.post.field_interactive_content_h5p
     - field.field.post.post.field_post
     - field.field.post.post.field_post_comments
     - field.field.post.post.field_recipient_group
     - field.field.post.post.field_recipient_user
+    - field.field.post.post.field_rich_post
     - field.field.post.post.field_visibility
     - social_post.post_type.post
   module:
     - dropdown
+    - h5peditor
+    - paragraphs
+    - text
 _core:
   default_config_hash: mDn58EZQn9tkwZbMCo9Pp-iSDBq9fyOugpQ499j_Xbc
 id: post.post.group
@@ -19,8 +24,14 @@ targetEntityType: post
 bundle: post
 mode: group
 content:
+  field_interactive_content_h5p:
+    type: h5p_editor
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_post:
-    type: string_textarea
+    type: text_textarea
     weight: 0
     label: hidden
     settings:
@@ -28,9 +39,27 @@ content:
       placeholder: 'What''s on your mind?'
     third_party_settings: {  }
     region: content
+  field_rich_post:
+    type: paragraphs
+    weight: 1
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+    third_party_settings: {  }
   field_visibility:
     type: dropdown_widget_type
-    weight: 1
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -39,7 +68,7 @@ content:
     settings:
       display_label: true
     type: boolean_checkbox
-    weight: 20
+    weight: 4
     third_party_settings: {  }
 hidden:
   field_post_comments: true

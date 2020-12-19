@@ -1,0 +1,36 @@
+uuid: cc06c619-a39f-4dfa-b9a3-9a19aa6cd476
+langcode: en
+status: true
+dependencies:
+  module:
+    - activity_logger
+third_party_settings:
+  activity_logger:
+    activity_bundle_entities:
+      comment-post_comment: comment-post_comment
+    activity_action: create_entitiy_action
+    activity_context: community_activity_context
+    activity_destinations:
+      stream_profile: stream_profile
+      stream_explore: stream_explore
+    activity_create_direct: true
+    activity_aggregate: true
+    activity_entity_condition: comment_not_reply
+_core:
+  default_config_hash: FPv4JgILalnDJHeibVmOse_q1b7Wty5dOYu_FjAbyoc
+template: create_comment_community_r_post
+label: 'Create comment on rich post in the community'
+description: 'A user add a comment to rich post in the community'
+text:
+  -
+    value: "<p><a href=\"absolute]\">[message:author:display-name]</a> commented on a post</p>\r\n"
+    format: full_html
+  -
+    value: "<p><a href=\"absolute]\">[message:author:display-name]</a> and @count others commented on a post</p>\r\n"
+    format: full_html
+settings:
+  'token options':
+    clear: false
+    'token replace': true
+  purge_override: false
+  purge_methods: {  }

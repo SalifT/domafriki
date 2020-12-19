@@ -1,0 +1,34 @@
+uuid: a57ebcc8-fe94-4a56-828f-97c3dd36e856
+langcode: en
+status: true
+dependencies:
+  module:
+    - activity_logger
+third_party_settings:
+  activity_logger:
+    activity_bundle_entities:
+      post-rich_post: post-rich_post
+    activity_action: create_entitiy_action
+    activity_context: community_activity_context
+    activity_destinations:
+      stream_home: stream_home
+      stream_profile: stream_profile
+      stream_explore: stream_explore
+    activity_create_direct: true
+    activity_aggregate: false
+    activity_entity_condition: ''
+_core:
+  default_config_hash: YlSti7lyl3ixR36t8-tk0pTY-xeCE3idd2A6F1dYlbM
+template: create_rich_post_community
+label: 'Create rich post in the community'
+description: 'A user created a rich post in the community'
+text:
+  -
+    value: "<p><a href=\"absolute]\">[message:author:display-name]</a> posted</p>\r\n"
+    format: full_html
+settings:
+  'token options':
+    clear: false
+    'token replace': true
+  purge_override: false
+  purge_methods: {  }

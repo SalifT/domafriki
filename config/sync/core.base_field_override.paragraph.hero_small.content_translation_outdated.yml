@@ -1,0 +1,22 @@
+uuid: 0529ab1d-9a69-430d-aa7c-e0c550b4ee15
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.hero_small
+id: paragraph.hero_small.content_translation_outdated
+field_name: content_translation_outdated
+entity_type: paragraph
+bundle: hero_small
+label: 'Translation outdated'
+description: 'A boolean indicating whether this translation needs to be updated.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

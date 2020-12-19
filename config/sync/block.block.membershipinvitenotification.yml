@@ -16,7 +16,7 @@ _core:
 id: membershipinvitenotification
 theme: socialblue
 region: content
-weight: -100
+weight: -33
 provider: null
 plugin: membership_invite_notification
 settings:

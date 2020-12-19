@@ -1,0 +1,36 @@
+uuid: e9963fe0-aecd-4db6-bf67-ad7b2f538766
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - user
+  theme:
+    - themes_overrides
+_core:
+  default_config_hash: e_3HKxADJMCzhWIGUnpTkNSn4mQD7KdKKD5eogz3vs4
+id: themes_overrides_breadcrumbs
+theme: themes_overrides
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+      administrator: administrator
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+  request_path:
+    id: request_path
+    context_mapping: {  }
+    negate: true
+    pages: "/node/*/all-enrollment-requests\r\n/node/*/all-enrollment-invites"

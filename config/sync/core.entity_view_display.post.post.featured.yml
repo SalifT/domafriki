@@ -1,0 +1,65 @@
+uuid: e3162493-3a9c-4922-b79c-89b6d37c5d92
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.post.featured
+    - field.field.post.post.field_interactive_content_h5p
+    - field.field.post.post.field_post
+    - field.field.post.post.field_post_comments
+    - field.field.post.post.field_recipient_group
+    - field.field.post.post.field_recipient_user
+    - field.field.post.post.field_rich_post
+    - field.field.post.post.field_visibility
+    - social_post.post_type.post
+  module:
+    - entity_reference_revisions
+    - h5p
+    - text
+    - user
+id: post.post.featured
+targetEntityType: post
+bundle: post
+mode: featured
+content:
+  field_interactive_content_h5p:
+    type: h5p_default
+    weight: 3
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_post:
+    type: text_default
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_rich_post:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  like_and_dislike:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_post_comments: true
+  field_recipient_group: true
+  field_recipient_user: true
+  field_visibility: true
+  search_api_excerpt: true

@@ -1,0 +1,22 @@
+uuid: 8c8f95e9-fb51-4460-b981-09244518b0d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.accordion
+id: paragraph.accordion.content_translation_outdated
+field_name: content_translation_outdated
+entity_type: paragraph
+bundle: accordion
+label: 'Translation outdated'
+description: 'A boolean indicating whether this translation needs to be updated.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,22 @@
+uuid: 75915670-36f4-437e-9efc-19ab277c426c
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.bp_view
+id: paragraph.bp_view.content_translation_outdated
+field_name: content_translation_outdated
+entity_type: paragraph
+bundle: bp_view
+label: 'Translation outdated'
+description: 'A boolean indicating whether this translation needs to be updated.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
