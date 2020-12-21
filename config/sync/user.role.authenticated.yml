@@ -26,6 +26,7 @@ permissions:
   - 'add photo post entities'
   - 'add post entities'
   - 'add post post entities'
+  - 'add rich post entities'
   - 'add rich_post post entities'
   - 'administer own comments'
   - 'cancel account'

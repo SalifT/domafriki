@@ -1,0 +1,31 @@
+uuid: 8c2b6d5a-833b-4dd2-9793-1e13294eb306
+langcode: en
+status: true
+dependencies:
+  module:
+    - book
+    - node
+  theme:
+    - domafrikiblue
+_core:
+  default_config_hash: VmWM44zjZhOdhge4MgqTs3AB6kJIuOex20wwnv5BpMo
+id: domafrikiblue_booknavigation_2
+theme: domafrikiblue
+region: complementary_top
+weight: 0
+provider: null
+plugin: book_navigation
+settings:
+  id: book_navigation
+  label: 'Table of contents'
+  provider: book
+  label_display: visible
+  block_mode: 'book pages'
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      book: book
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

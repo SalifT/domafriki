@@ -1,0 +1,33 @@
+uuid: 72c151d7-ce61-44ed-b289-ea0a522db747
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.topics
+  module:
+    - system
+    - views
+  theme:
+    - domafrikiblue
+_core:
+  default_config_hash: Yy_BNByTXbY8nWGFFBwq_s4kiC6XR_8VMjnBtmkoxeA
+id: domafrikiblue_views_block__topics_block_user_topics
+theme: domafrikiblue
+region: complementary_bottom
+weight: 3
+provider: null
+plugin: 'views_block:topics-block_user_topics'
+settings:
+  id: 'views_block:topics-block_user_topics'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  type: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*/stream'
+    negate: false
+    context_mapping: {  }

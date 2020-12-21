@@ -1,0 +1,20 @@
+uuid: b0f3b51b-e438-43bd-9e70-9afe425fa140
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_event
+  theme:
+    - domafrikiblue
+id: domafrikiblue_eventrequestsnotification_2
+theme: domafrikiblue
+region: content
+weight: -29
+provider: null
+plugin: event_requests_notification
+settings:
+  id: event_requests_notification
+  label: 'Event requests notification'
+  provider: social_event
+  label_display: '0'
+visibility: {  }

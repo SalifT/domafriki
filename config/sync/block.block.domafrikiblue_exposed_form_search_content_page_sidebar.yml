@@ -1,0 +1,31 @@
+uuid: 13a65d76-e9af-4414-9369-de84d24c7889
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.search_content
+  module:
+    - system
+    - views
+  theme:
+    - domafrikiblue
+_core:
+  default_config_hash: QRo3tGvHr084jZ0ZUS31X0Z9_VJcHRdtVG0B6IxLllQ
+id: domafrikiblue_exposed_form_search_content_page_sidebar
+theme: domafrikiblue
+region: complementary_top
+weight: 3
+provider: null
+plugin: 'views_exposed_filter_block:search_content-page'
+settings:
+  id: 'views_exposed_filter_block:search_content-page'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: 'Sort and Filter'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/search/content\r\n/search/content/*"
+    negate: false
+    context_mapping: {  }

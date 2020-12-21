@@ -1,4 +1,4 @@
-uuid: bb66e4a2-690d-45eb-97f0-d10f31dec77a
+uuid: 5b058ab6-761d-4cb4-b9b5-959899369a69
 langcode: en
 status: true
 dependencies:
@@ -16,7 +16,7 @@ dependencies:
     - text
     - user
 _core:
-  default_config_hash: cPgQP7Ym6trChz5j96oGl3xY-KScNaDwo-4SIlQfOaM
+  default_config_hash: P0gS_88lzxVVG6jPxIGMPXl7qDxpzkmZLfNYMLX8XBA
 id: post.rich_post.default
 targetEntityType: post
 bundle: rich_post

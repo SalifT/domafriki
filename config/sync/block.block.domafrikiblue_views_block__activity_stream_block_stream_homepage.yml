@@ -1,0 +1,33 @@
+uuid: 5277f0e6-695d-4aaf-b4c3-9901bcdb9758
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.activity_stream
+  module:
+    - system
+    - views
+  theme:
+    - domafrikiblue
+_core:
+  default_config_hash: RymhcPR3B-3uuTJ92k7c0gWRYQVr6wZCa5q4AFJ0C5E
+id: domafrikiblue_views_block__activity_stream_block_stream_homepage
+theme: domafrikiblue
+region: content
+weight: -30
+provider: null
+plugin: 'views_block:activity_stream-block_stream_homepage'
+settings:
+  id: 'views_block:activity_stream-block_stream_homepage'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  type: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /stream
+    negate: false
+    context_mapping: {  }
