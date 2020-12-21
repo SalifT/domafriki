@@ -75,6 +75,9 @@
             },
             "drupal/social_post": {
                 "Fix for supporting post form in modal: Call to a member function on string": "https://www.drupal.org/files/issues/2020-10-03/getdisplayname-on-string-3174630-2.patch"
+            },
+            "goalgorilla/open_social": {
+                "Call to undefined function drush_print()":"patches/call-to-undefined-function-drush_print-3114769-19.patch"
             }
         }
     },
