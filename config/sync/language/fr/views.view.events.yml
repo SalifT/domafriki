@@ -41,6 +41,3 @@ display:
         status:
           expose:
             label: 'Statut de publication'
-        field_event_date_value:
-          expose:
-            label: 'Date de début'

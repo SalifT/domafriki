@@ -1,0 +1,21 @@
+uuid: a95c6a9f-5f5d-4c50-b087-934ced8c8b2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.message.field_message_context
+    - message.template.create_rich_post_group
+  module:
+    - options
+id: message.create_rich_post_group.field_message_context
+field_name: field_message_context
+entity_type: message
+bundle: create_rich_post_group
+label: field_message_context
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

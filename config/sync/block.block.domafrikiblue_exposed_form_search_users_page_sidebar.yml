@@ -1,0 +1,31 @@
+uuid: fbf321c0-ae8e-4347-84a7-5faeae4eca04
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.search_users
+  module:
+    - system
+    - views
+  theme:
+    - domafrikiblue
+_core:
+  default_config_hash: uenMjym2h_uiKBmwJ9SfUzc5ayms6ucjJQVya-YiZY8
+id: domafrikiblue_exposed_form_search_users_page_sidebar
+theme: domafrikiblue
+region: complementary_top
+weight: 4
+provider: null
+plugin: 'views_exposed_filter_block:search_users-page'
+settings:
+  id: 'views_exposed_filter_block:search_users-page'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: Filter
+visibility:
+  request_path:
+    id: request_path
+    pages: "/search/users\r\n/search/users/*"
+    negate: false
+    context_mapping: {  }

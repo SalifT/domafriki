@@ -1,0 +1,28 @@
+uuid: cb89ec95-2eba-45e2-9007-9d8db341d5a6
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_post
+    - system
+  theme:
+    - domafrikiblue
+_core:
+  default_config_hash: Keolfk9f2yJvo-tVh71uqBoVc2jm2oCVvhvjHciUayA
+id: domafrikiblue_postonprofileblock
+theme: domafrikiblue
+region: hidden
+weight: -32
+provider: null
+plugin: post_profile_block
+settings:
+  id: post_profile_block
+  label: 'Post on profile block'
+  provider: social_post
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*/stream'
+    negate: false
+    context_mapping: {  }

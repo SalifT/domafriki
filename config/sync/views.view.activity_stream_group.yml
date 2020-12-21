@@ -1,4 +1,4 @@
-uuid: de9aa6ca-590d-4a20-9c91-1ddbfe637de8
+uuid: 9477fd39-accd-4c08-a501-94e2ee578bc3
 langcode: en
 status: true
 dependencies:
@@ -9,8 +9,6 @@ dependencies:
     - activity_viewer
     - group
     - options
-_core:
-  default_config_hash: 3iSpIb12xtcDbygGMKEwDajF_UxdjbJOLsfjNMM_fwE
 id: activity_stream_group
 label: activity_stream_group
 module: views
@@ -326,7 +324,6 @@ display:
         - user.group_permissions
       tags:
         - 'config:core.entity_view_display.activity.activity.default'
-        - 'config:core.entity_view_display.activity.activity.featured'
         - 'config:core.entity_view_display.activity.activity.notification'
         - 'config:core.entity_view_display.activity.activity.notification_archive'
   block_stream_group:
@@ -348,6 +345,5 @@ display:
         - user.group_permissions
       tags:
         - 'config:core.entity_view_display.activity.activity.default'
-        - 'config:core.entity_view_display.activity.activity.featured'
         - 'config:core.entity_view_display.activity.activity.notification'
         - 'config:core.entity_view_display.activity.activity.notification_archive'

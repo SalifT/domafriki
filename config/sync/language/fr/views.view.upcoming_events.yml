@@ -29,12 +29,6 @@ display:
         field_account_target_id:
           exception:
             title: Tout
-  page_community_events:
-    display_options:
-      filters:
-        field_event_date_value:
-          expose:
-            label: 'Date de début'
   upcoming_events_group:
     display_options:
       arguments:

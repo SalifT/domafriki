@@ -1,0 +1,22 @@
+uuid: 2ca9da1d-7abd-4a2d-98f5-db0e1af0eb06
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - domafrikiblue
+_core:
+  default_config_hash: eVKhOL_cct67bmqEqLvJdxLYRhBDWp02t-UrdcJgIrQ
+id: domafrikiblue_messages
+theme: domafrikiblue
+region: content
+weight: -28
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

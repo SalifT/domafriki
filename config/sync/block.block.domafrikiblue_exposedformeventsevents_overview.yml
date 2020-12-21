@@ -1,0 +1,39 @@
+uuid: 2a914933-653c-4abb-9b16-2c05fd6ee539
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.events
+  module:
+    - system
+    - user
+    - views
+  theme:
+    - domafrikiblue
+_core:
+  default_config_hash: nh5w2HyyMdVmLkORoql-7P8RXgsF_bl26XLi2MFy49w
+id: domafrikiblue_exposedformeventsevents_overview
+theme: domafrikiblue
+region: complementary_top
+weight: 1
+provider: null
+plugin: 'views_exposed_filter_block:events-events_overview'
+settings:
+  id: 'views_exposed_filter_block:events-events_overview'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: Filter
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+  request_path:
+    id: request_path
+    pages: '/user/*/events'
+    negate: false
+    context_mapping: {  }
