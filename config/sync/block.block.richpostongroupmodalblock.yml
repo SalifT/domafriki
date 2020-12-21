@@ -1,4 +1,4 @@
-uuid: 7c1da13d-be1e-4803-bbb4-67509ee036e0
+uuid: c4f3dbc3-88aa-45a9-84d8-b45085b85b2c
 langcode: en
 status: true
 dependencies:
@@ -7,10 +7,12 @@ dependencies:
     - system
   theme:
     - socialblue
+_core:
+  default_config_hash: egZgIqStx4O5ajpegwHCSQsKV1W5yueJqezUDI2ZdC8
 id: richpostongroupmodalblock
 theme: socialblue
-region: hidden
-weight: -27
+region: content
+weight: -22
 provider: null
 plugin: rich_post_group_modal_block
 settings:

@@ -1,4 +1,4 @@
-uuid: e940648b-1f31-4fa6-8f44-9a2962a3cf6c
+uuid: 9ddaff94-b40c-4d4e-a891-67b5bc0c2aaf
 langcode: en
 status: true
 dependencies:
@@ -8,13 +8,11 @@ dependencies:
     - system
     - views
   theme:
-    - socialbase
-_core:
-  default_config_hash: qB56HaN5RVyXpw0ojJVwPpZNe_wP11eW05nYQa4lrcc
+    - domafrikiblue
 id: views_block__activity_stream_profile_block_1
-theme: socialbase
+theme: domafrikiblue
 region: content
-weight: -9
+weight: 0
 provider: null
 plugin: 'views_block:activity_stream_profile-block_1'
 settings:
@@ -24,6 +22,7 @@ settings:
   label_display: '0'
   views_label: ''
   items_per_page: none
+  type: none
 visibility:
   request_path:
     id: request_path

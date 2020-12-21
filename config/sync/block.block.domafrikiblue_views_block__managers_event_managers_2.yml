@@ -1,0 +1,41 @@
+uuid: 20d72032-2b5e-4413-b5d2-140be2ad8b97
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.managers
+  module:
+    - node
+    - system
+    - views
+  theme:
+    - domafrikiblue
+_core:
+  default_config_hash: AoS_Lx-_3hbUb2zJ7Kqbh5TJ_vJ64N3uZiEdxDN28zU
+id: domafrikiblue_views_block__managers_event_managers_2
+theme: domafrikiblue
+region: complementary_bottom
+weight: 0
+provider: null
+plugin: 'views_block:managers-event_managers'
+settings:
+  id: 'views_block:managers-event_managers'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  type: none
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      event: event
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: "*/all-enrollment-requests/confirm-decline/*\r\n*/invite/email\r\n*/invite/user\r\n*/invite/confirm\r\n*/all-enrollment-requests/confirm-decline/*\r\n*/invite/email\r\n*/invite/user\r\n*/invite/confirm\r\n*/all-enrollment-requests/confirm-decline/*\r\n*/invite/email\r\n*/invite/user\r\n*/invite/confirm\r\n*/all-enrollment-requests/confirm-decline/*\r\n*/invite/email\r\n*/invite/user\r\n*/invite/confirm\r\n*/all-enrollment-requests/confirm-decline/*\r\n*/invite/email\r\n*/invite/user\r\n*/invite/confirm\r\n*/all-enrollment-requests/confirm-decline/*\r\n*/invite/email\r\n*/invite/user\r\n*/invite/confirm\r\n*/all-enrollment-requests/confirm-decline/*\r\n*/invite/email\r\n*/invite/user\r\n*/invite/confirm"

@@ -1,0 +1,31 @@
+uuid: caafc6eb-454a-4bf9-9d95-3b981328f31d
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.search_groups
+  module:
+    - system
+    - views
+  theme:
+    - domafrikiblue
+_core:
+  default_config_hash: '-6ABidCJcLgsPywIcsaCBkxqRyntngTLlv_rZynSr58'
+id: domafrikiblue_exposed_form_search_groups_page_sidebar
+theme: domafrikiblue
+region: complementary_top
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:search_groups-page'
+settings:
+  id: 'views_exposed_filter_block:search_groups-page'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: Filter
+visibility:
+  request_path:
+    id: request_path
+    pages: "/search/groups\r\n/search/groups/*"
+    negate: false
+    context_mapping: {  }

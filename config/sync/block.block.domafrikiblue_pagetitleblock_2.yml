@@ -1,0 +1,28 @@
+uuid: 92bfd36e-1f09-4cc3-a06e-09492f20f7ab
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_core
+    - system
+  theme:
+    - domafrikiblue
+_core:
+  default_config_hash: L-yGDnhJpWTUZo0pkCchj5d8szzjH7OR8itCWuf4NPQ
+id: domafrikiblue_pagetitleblock_2
+theme: domafrikiblue
+region: hero
+weight: -20
+provider: null
+plugin: social_page_title_block
+settings:
+  id: social_page_title_block
+  label: 'Page title for enrollments'
+  provider: social_core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "*/enrollments\r\n*/organisers\r\n*/manage-enrollments\r\n*/all-enrollments"
+    negate: false
+    context_mapping: {  }

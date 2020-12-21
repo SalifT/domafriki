@@ -1,4 +1,4 @@
-uuid: ce043e2a-849b-4a33-8617-524ab2a203a0
+uuid: f22a97e8-1dd6-4315-bdc1-b9b9f1c12fa3
 langcode: en
 status: true
 dependencies:
@@ -7,10 +7,12 @@ dependencies:
     - system
   theme:
     - socialblue
+_core:
+  default_config_hash: S6XJ5VVXA-h05JI9oobTs2fo_cQFT8TMpd2nJH47A9A
 id: richpostonprofilemodalblock
 theme: socialblue
-region: hidden
-weight: -26
+region: content
+weight: -21
 provider: null
 plugin: rich_post_profile_modal_block
 settings:

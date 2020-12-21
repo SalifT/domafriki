@@ -34,6 +34,7 @@ module:
   dynamic_entity_reference: 0
   dynamic_page_cache: 0
   editor: 0
+  editor_advanced_link: 0
   entity: 0
   entity_access_by_field: 0
   entity_reference_revisions: 0
@@ -175,6 +176,7 @@ theme:
   claro: 0
   gin: 0
   themes_overrides: 0
+  domafrikiblue: 0
 profile: social
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

@@ -1,0 +1,22 @@
+uuid: 9da219b4-0ccb-4475-bc0d-b9582d1d0e5c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - domafrikiblue
+_core:
+  default_config_hash: WQavb4yx5tp3JXnHNNH_B1-tp7ADTvyM3LDxGEuWbMw
+id: domafrikiblue_content
+theme: domafrikiblue
+region: content
+weight: -26
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }
