@@ -119,6 +119,7 @@ permissions:
   - 'edit terms in profile_tag'
   - 'edit terms in topic_types'
   - 'flag follow_content'
+  - 'link to any page'
   - 'manage all groups'
   - 'manage event enrollment requests'
   - 'manage everything enrollments'

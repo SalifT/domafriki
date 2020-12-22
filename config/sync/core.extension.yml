@@ -79,6 +79,7 @@ module:
   path_alias: 0
   profile: 0
   r4032login: 0
+  redirect: 0
   release_tracker: 0
   rest: 0
   rich_post: 0
@@ -104,6 +105,7 @@ module:
   social_core: 0
   social_editor: 0
   social_event: 0
+  social_event_addtocal: 0
   social_event_invite: 0
   social_event_managers: 0
   social_event_type: 0
