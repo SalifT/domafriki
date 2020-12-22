@@ -89,6 +89,7 @@ permissions:
   - 'edit own topic content'
   - 'edit profile tags'
   - 'flag follow_content'
+  - 'link to any page'
   - 'manage all groups'
   - 'manage event enrollment requests'
   - 'manage everything enrollments'

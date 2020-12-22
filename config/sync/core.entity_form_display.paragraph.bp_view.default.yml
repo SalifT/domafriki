@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.bp_view.bp_background
+    - field.field.paragraph.bp_view.bp_header
     - field.field.paragraph.bp_view.bp_view
     - field.field.paragraph.bp_view.bp_width
     - paragraphs.paragraphs_type.bp_view
@@ -22,8 +23,16 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
-  bp_view:
+  bp_header:
+    type: string_textfield
     weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  bp_view:
+    weight: 3
     settings:
       match_operator: CONTAINS
       size: '60'
