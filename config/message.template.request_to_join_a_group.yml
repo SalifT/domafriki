@@ -1,0 +1,47 @@
+uuid: ff8882c6-6bad-4843-a7b2-b7afaac60bc1
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.full_html
+  module:
+    - activity_logger
+  enforced:
+    module:
+      - social_group_request
+third_party_settings:
+  activity_logger:
+    activity_bundle_entities:
+      group_content-group_content_type_7fcb76fdf61a9: group_content-group_content_type_7fcb76fdf61a9
+      group_content-group_content_type_c8bae2527294c: group_content-group_content_type_c8bae2527294c
+    activity_action: create_entitiy_action
+    activity_context: group_content_in_my_group_activity_context
+    activity_destinations:
+      notifications: notifications
+      email: email
+    activity_create_direct: true
+    activity_aggregate: false
+    activity_entity_condition: ''
+    email_subject: 'Someone wants to join your group'
+_core:
+  default_config_hash: Ches-b8cUgQgG83n7XSWPBbRIUWZG5j55q7NOeioi7o
+template: request_to_join_a_group
+label: 'Request to join a group'
+description: 'A person requests membership to a group I manage'
+text:
+  -
+    value: "<p><a href=\"absolute]\">[message:recipient-user:display-name]</a> has requested membership to the <a href=\"gurl]\">[message:gtitle]</a> group</p>\r\n"
+    format: basic_html
+  -
+    value: "<p><a href=\"absolute]\">[message:recipient-user:display-name]</a> has requested membership to the <a href=\"gurl]\">[message:gtitle]</a> group</p>\r\n"
+    format: basic_html
+  -
+    value: "<p><a href=\"[message:recipient-user:url:absolute]\">[message:recipient-user:display-name]</a> has requested to join your group&nbsp;<a href=\"[message:gurl]\">[message:gtitle]</a></p>\r\n\r\n<p>[message:preview]</p>\r\n\r\n<p>[message:cta_button]</p>\r\n"
+    format: full_html
+settings:
+  'token options':
+    clear: false
+    'token replace': true
+  purge_override: false
+  purge_methods: {  }

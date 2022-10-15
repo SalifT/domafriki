@@ -1,0 +1,12 @@
+uuid: d0178119-7439-45ec-b013-59887e4c56f2
+langcode: en
+status: true
+dependencies:
+  module:
+    - group
+_core:
+  default_config_hash: aSldOvfYlcervH_tNioEypeWBC_zi6o8NgliDe6v7nM
+id: group.stream
+label: Stream
+targetEntityType: group
+cache: true

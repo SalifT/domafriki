@@ -1,0 +1,15 @@
+uuid: db55ea5a-8778-4bff-bb5a-e49ba06e64ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - flag.flag.follow_content
+  module:
+    - flag
+id: flag_action.follow_content_unflag
+label: 'Unfollow content'
+type: node
+plugin: 'flag_action:follow_content_unflag'
+configuration:
+  flag_id: follow_content
+  flag_action: unflag

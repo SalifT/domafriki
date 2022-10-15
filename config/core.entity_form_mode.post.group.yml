@@ -1,0 +1,12 @@
+uuid: 57c5ce24-edeb-4fda-8af8-1dffb7fdad84
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_post
+_core:
+  default_config_hash: j1ZT5107i2koTB3Ts1Ql6HJBJTRbgLAlMvNpCsVH2ZA
+id: post.group
+label: Group
+targetEntityType: post
+cache: true

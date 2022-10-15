@@ -1,0 +1,17 @@
+uuid: ba8afa0c-2d4c-4698-a968-d62afb77c444
+langcode: en
+status: true
+dependencies:
+  module:
+    - ginvite
+title: 'Default cron handler'
+id: ginvite_cron
+weight: 0
+module: ginvite
+callback: ginvite_cron
+scheduler:
+  id: simple
+launcher:
+  id: serial
+logger:
+  id: database

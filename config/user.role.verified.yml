@@ -1,0 +1,81 @@
+uuid: b2bd12f3-3220-42ca-907f-8ca9aed42d91
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.mail_html
+    - node.type.event
+    - node.type.topic
+  module:
+    - comment
+    - entity_access_by_field
+    - filter
+    - flag
+    - group
+    - like_and_dislike
+    - mentions
+    - node
+    - override_node_options
+    - profile
+    - social_comment
+    - social_event
+    - social_group
+    - social_post
+    - social_search
+    - social_topic
+_core:
+  default_config_hash: RpYnxuEPYUFYbgqHk0y_puQInIoqZLIbyZhHuVuQjLU
+id: verified
+label: 'Verified user'
+weight: 5
+is_admin: null
+permissions:
+  - 'access comments'
+  - 'access mentions'
+  - 'access user profiles'
+  - 'access users search'
+  - 'add or remove like votes on comment of comment'
+  - 'add or remove like votes on event of node'
+  - 'add or remove like votes on post'
+  - 'add or remove like votes on post_comment of comment'
+  - 'add or remove like votes on topic of node'
+  - 'add photo post entities'
+  - 'add post entities'
+  - 'add post post entities'
+  - 'administer own comments'
+  - 'create closed_group group'
+  - 'create event content'
+  - 'create flexible_group group'
+  - 'create open_group group'
+  - 'create public_group group'
+  - 'create topic content'
+  - 'delete own comments'
+  - 'delete own event content'
+  - 'delete own post entities'
+  - 'delete own topic content'
+  - 'edit own comments'
+  - 'edit own event content'
+  - 'edit own post entities'
+  - 'edit own topic content'
+  - 'flag follow_content'
+  - 'flag mute_group_notifications'
+  - 'override event published option'
+  - 'override topic published option'
+  - 'post comments'
+  - 'skip comment approval'
+  - 'unflag follow_content'
+  - 'unflag mute_group_notifications'
+  - 'use text format mail_html'
+  - 'view any profile profile'
+  - 'view community posts'
+  - 'view events on my profile'
+  - 'view events on other profiles'
+  - 'view group stream page'
+  - 'view groups on my profile'
+  - 'view groups on other profiles'
+  - 'view node.event.field_content_visibility:community content'
+  - 'view node.page.field_content_visibility:community content'
+  - 'view node.topic.field_content_visibility:community content'
+  - 'view own unpublished post entities'
+  - 'view topics on my profile'
+  - 'view topics on other profiles'

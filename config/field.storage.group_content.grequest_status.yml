@@ -1,0 +1,22 @@
+uuid: ca2270e3-81ce-49c3-8589-49278d9a96f8
+langcode: en
+status: true
+dependencies:
+  module:
+    - group
+_core:
+  default_config_hash: xeFWS5xJtaemyt0mmJJbKXGZx2msNjeARfSsHdLjsWw
+id: group_content.grequest_status
+field_name: grequest_status
+entity_type: group_content
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: true
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: true
+custom_storage: false

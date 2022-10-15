@@ -1,0 +1,28 @@
+uuid: 92655fcc-2b92-45e1-a5ce-73dcb0d80892
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_group
+    - system
+  theme:
+    - socialblue
+_core:
+  default_config_hash: sWMtIp5uGqWUT775wR2MpUCHGbSEBDfEMNThe4Noqfo
+id: socialblue_group_add_topic_block
+theme: socialblue
+region: complementary_top
+weight: -95
+provider: null
+plugin: group_add_topic_block
+settings:
+  id: group_add_topic_block
+  label: 'Group add topic block'
+  label_display: '0'
+  provider: social_group
+visibility:
+  request_path:
+    id: request_path
+    pages: '/group/*/topics'
+    negate: false
+    context_mapping: {  }

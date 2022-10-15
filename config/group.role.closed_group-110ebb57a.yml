@@ -1,0 +1,17 @@
+uuid: b3cd1e2c-874a-4487-af4f-cd4231dcb855
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.closed_group
+  enforced:
+    config:
+      - user.role.verified
+id: closed_group-110ebb57a
+label: 'Verified user'
+weight: 5
+internal: true
+audience: outsider
+group_type: closed_group
+permissions_ui: false
+permissions: {  }

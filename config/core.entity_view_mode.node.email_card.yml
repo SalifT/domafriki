@@ -1,0 +1,15 @@
+uuid: 66c08ad4-24ff-4a70-84ec-6975aab027f0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  enforced:
+    module:
+      - social_core
+_core:
+  default_config_hash: c9Ht8evnYkwQBarKQ26RCZAbm912AqgZnIRvFwzdN0I
+id: node.email_card
+label: 'Email Card'
+targetEntityType: node
+cache: true

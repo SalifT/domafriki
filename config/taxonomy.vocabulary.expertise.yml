@@ -1,0 +1,10 @@
+uuid: 9690c14d-794c-49ae-a9bd-4a14505cff4f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: epRs57Sw7vhbWAgfsdT8AlIC3DXa3rfauWFlgQKo10I
+name: Expertise
+vid: expertise
+description: 'A users expertises'
+weight: 0

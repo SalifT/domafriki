@@ -1,0 +1,12 @@
+uuid: 953eb898-21d0-41f5-92ab-a5535b359eac
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_post
+_core:
+  default_config_hash: XqND3WmnPUGOb_j_NqRg7_of_gaSstrJ4iIJg3wD9TI
+id: post.profile
+label: 'Profile of others'
+targetEntityType: post
+cache: true

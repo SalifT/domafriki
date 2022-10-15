@@ -1,0 +1,28 @@
+uuid: 75925b40-846a-4884-b058-5ab6a1d9a649
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_topic
+    - system
+  theme:
+    - socialblue
+_core:
+  default_config_hash: eiC2CIa5Q7scScFEdXiTwbct8QT61s-7T-Uk8j0HYo4
+id: socialblue_topic_add_block
+theme: socialblue
+region: complementary_top
+weight: -98
+provider: null
+plugin: topic_add_block
+settings:
+  id: topic_add_block
+  label: 'Topic add block'
+  label_display: '0'
+  provider: social_topic
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*/topics'
+    negate: false
+    context_mapping: {  }
